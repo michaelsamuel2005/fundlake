@@ -1,0 +1,10 @@
+source: oms_counterparties
+owner: Trading Operations (OMS)
+description: Broker reference data.
+schema_version: 1
+grain: counterparty_id
+volume: {min_rows: 1}
+fields:
+  counterparty_id: {type: string, nullable: false}
+  name:            {type: string, nullable: false}
+  lei:             {type: string, nullable: false}

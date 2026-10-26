@@ -1,0 +1,20 @@
+source: oms_trades
+owner: Trading Operations (OMS)
+description: Executed trades from the order-management system, one row per fill. Delivered as daily batches; replays resend a whole batch.
+schema_version: 1
+grain: trade_id (may repeat when a batch is replayed)
+freshness: {expected_by: "T+0 20:00 UK", max_age_hours: 26}
+volume: {min_rows: 100}
+fields:
+  trade_id:        {type: string, nullable: false, pattern: '^T\d{7}$'}
+  fund_id:         {type: string, nullable: false, enum: [F01, F02, F03, F04]}
+  sedol:           {type: string, nullable: false, check: sedol}
+  side:            {type: string, nullable: false, enum: [BUY, SELL]}
+  quantity:        {type: decimal, nullable: false, min: 0.000001}
+  price:           {type: decimal, nullable: false, min: 0.000001}
+  currency:        {type: string, nullable: false, enum: [GBP, EUR, USD]}
+  trade_date:      {type: date, nullable: false}
+  settle_date:     {type: date, nullable: false}
+  counterparty_id: {type: string, nullable: false}
+  batch_id:        {type: string, nullable: false}
+  received_at:     {type: timestamp, nullable: false}

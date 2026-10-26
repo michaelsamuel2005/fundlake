@@ -1,0 +1,39 @@
+# Databricks Asset Bundle: runs the PySpark bronze ingestion on serverless compute (works on Databricks Free Edition)
+# and writes a parity file that scripts/check_databricks_parity.py compares with the DuckDB bronze layer.
+# Run it with: bash scripts/run_databricks.sh   (it uploads the data, deploys this bundle, runs the job, fetches the result)
+bundle:
+  name: fundlake
+
+variables:
+  catalog:
+    description: Unity Catalog catalog (Free Edition has "workspace")
+    default: workspace
+  schema:
+    description: Schema for the bronze tables and the raw-data volume
+    default: fundlake
+
+resources:
+  jobs:
+    fundlake_bronze:
+      name: fundlake_bronze_ingestion
+      tasks:
+        - task_key: ingest_bronze
+          spark_python_task:
+            python_file: spark/ingest_bronze.py
+            parameters:
+              - --raw
+              - /Volumes/${var.catalog}/${var.schema}/raw
+              - --schema
+              - ${var.catalog}.${var.schema}
+              - --parity-out
+              - /Volumes/${var.catalog}/${var.schema}/raw/_parity/spark_bronze_parity.json
+          environment_key: default
+      environments:
+        - environment_key: default
+          spec:
+            environment_version: "2"
+
+targets:
+  dev:
+    mode: development
+    default: true

@@ -1,0 +1,17 @@
+source: pm_notices
+owner: General partners via the private-markets portal
+description: Capital-call and distribution notices (header). Amounts are positive by convention; the type gives the direction.
+schema_version: 1
+grain: notice_id (may repeat when the portal resends)
+freshness: {expected_by: "on receipt", max_age_hours: 48}
+volume: {min_rows: 50}
+fields:
+  notice_id:    {type: string, nullable: false, pattern: '^(CN|DN)-PM\d{2}-F\d{2}-\d{3}(-S)?$'}
+  pm_fund_id:   {type: string, nullable: false, pattern: '^PM\d{2}$'}
+  investor_id:  {type: string, nullable: false}
+  notice_type:  {type: string, nullable: false, enum: [capital_call, distribution]}
+  notice_date:  {type: date, nullable: false}
+  value_date:   {type: date, nullable: false}
+  currency:     {type: string, nullable: false, enum: [GBP, EUR, USD]}
+  total_amount: {type: decimal, nullable: false}
+  received_at:  {type: timestamp, nullable: false}

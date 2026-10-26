@@ -1,0 +1,2 @@
+transfer_id,pm_fund_id,buyer_investor_id,seller_name,reference_date,transfer_date,reference_nav,purchase_price,transferred_commitment,inherited_paid_in,inherited_distributions,unfunded_at_transfer
+TR-0001,PM01,F04,Seller LP (synthetic),2025-03-31,2025-06-30,11899208.75,8888718.81,40000000.0,35903288.86,34387975.99,4096711.14

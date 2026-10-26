@@ -1,0 +1,32 @@
+name: fundlake
+version: "0.1.0"
+config-version: 2
+profile: fundlake
+model-paths: ["models"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+target-path: "target"
+clean-targets: ["target"]
+vars:
+  raw_path: "../data/raw"
+  as_of_date: "2026-09-30"
+  nav_tolerance_bps: 0.5
+  position_tolerance: 0.000001
+  stale_run_length: 4
+  pii_salt: "fundlake-demo-salt-not-a-secret"
+  pm_statement_due_days: 90
+  pm_first_quarter: "2018-01-01"
+models:
+  fundlake:
+    bronze:
+      +schema: bronze
+      +materialized: table
+      +tags: ["bronze"]
+    silver:
+      +schema: silver
+      +materialized: table
+      +tags: ["silver"]
+    gold:
+      +schema: gold
+      +materialized: table
+      +tags: ["gold"]

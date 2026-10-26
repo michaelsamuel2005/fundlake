@@ -1,0 +1,17 @@
+source: insurer_claims
+owner: Insurer (claims)
+description: Claims extract with paid and outstanding amounts.
+schema_version: 1
+grain: claim_id (may repeat on re-extract)
+freshness: {expected_by: "Monthly, day 3", max_age_hours: 800}
+volume: {min_rows: 100}
+fields:
+  claim_id:       {type: string, nullable: false, pattern: '^CL\d{6}$'}
+  policy_id:      {type: string, nullable: false}
+  loss_date:      {type: date, nullable: false}
+  reported_date:  {type: date, nullable: false}
+  claim_type:     {type: string, nullable: false, enum: [Damage, Theft, Liability, Water]}
+  paid_amount:    {type: decimal, nullable: false, min: 0}
+  reserve_amount: {type: decimal, nullable: false, min: 0}
+  status:         {type: string, nullable: false, enum: [Open, Closed]}
+  extract_ts:     {type: timestamp, nullable: false}

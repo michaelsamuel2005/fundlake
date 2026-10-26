@@ -1,0 +1,36 @@
+<html><head><meta charset=utf-8><style>
+@page { size: A4; margin: 14mm 15mm; }
+body { font-family: Arial, Helvetica, sans-serif; font-size: 9.2pt; line-height: 1.32; color: #1b1f24; }
+h1 { font-size: 15pt; margin: 0 0 2px; color: #14304f; } h2 { font-size: 10.5pt; margin: 9px 0 3px; color: #14304f; border-bottom: 1px solid #c9d3de; padding-bottom: 1px; }
+.sub { color: #51606f; font-size: 8.5pt; margin-bottom: 6px; } .tag { background: #fff4d6; border: 1px solid #e3c870; padding: 3px 6px; font-size: 8pt; margin: 4px 0 6px; }
+table { border-collapse: collapse; width: 100%; font-size: 8.3pt; margin: 3px 0; } th { background: #14304f; color: #fff; text-align: left; padding: 2px 5px; font-weight: 600; }
+td { border-bottom: 1px solid #dde3ea; padding: 2px 5px; vertical-align: top; } p { margin: 2px 0 4px; } .rec { margin: 3px 0 5px; } .rec b { color: #14304f; }
+img { width: 100%; } .bx { flex:1; border:1px solid #9fb2c6; padding:3px 3px; border-radius:3px; } .ar { align-self:center; color:#14304f; font-size:8pt; } .small { font-size: 7.8pt; color: #51606f; } code { font-size: 8pt; background: #f1f4f7; padding: 0 2px; }
+</style></head><body>
+<h1>Fund data controls review: simulated asset manager and insurance book</h1>
+<div class=sub>Client note · prepared from the fundlake platform build · period 1 July to 30 September 2026</div>
+<div class=tag><b>Illustrative engagement on synthetic data.</b> The funds, securities, brokers, policies and clients are invented, and every fault was planted by the author so that detection could be scored. No real organisation or person is described.</div>
+<h2>Summary</h2>
+<p>We rebuilt the daily data chain from six source systems, listed and private assets, into one governed platform and tested it against 156 known faults of 19 classes. Every one was found, with no false alarms. On 256 fund-days, our NAV differed from the administrator's by more than half a basis point on 35, by up to 51.2 bp (£108,608); every one of the 35 was traced to a named data fault, and 0 were unexplained. Position reconciliation surfaced 5 separate custodian breaks over 71 break-days, of which 3 are explained by a specific trade the custodian never booked.</p>
+<h2>What we found</h2>
+<table><tr><th>Finding</th><th>Size</th><th>Why it matters</th></tr>
+<tr><td>Missing vendor prices, carried forward</td><td>8 security-days</td><td>The holding is valued at an old price until the vendor catches up; the NAV looks normal.</td></tr>
+<tr><td>Stale price (unchanged 6 days) and stale EUR/GBP rate (6 days)</td><td>1 security; 1 pair</td><td>Looks like a valid price. The stale rate moved fund NAVs by up to 49.1 bp against the administrator.</td></tr>
+<tr><td>Replayed OMS batches</td><td>32 of 769 rows (4.2%)</td><td>Would double-count trades and create false breaks. Removed before any position is built.</td></tr>
+<tr><td>Security that changed ISIN mid-period</td><td>1 security; 90 custodian rows</td><td>A join on today's identifier loses every row sent under the old one. We join as of the date.</td></tr>
+<tr><td>Identifier claimed by two securities</td><td>1 SEDOL</td><td>Earliest claim wins; the later one is ignored and reported to the data owner.</td></tr>
+<tr><td>Custodian vs OMS position breaks</td><td>5 episodes, 71 break-days</td><td>3 are one unbooked trade each; 1 position missing at the custodian; 1 unexplained difference that no trade accounts for.</td></tr>
+<tr><td>Private markets: a capital-call notice never received</td><td>£808,263.77</td><td>Found only by reconciling the GP's capital account to our notices; until it is obtained, that commitment's TVPI and IRR are wrong, so it is flagged unreconciled.</td></tr>
+<tr><td>Private markets: lagged and stale NAVs, a secondary interest</td><td>92 days; 3 stale quarters</td><td>Rolling the last statement forward still leaves an average 3.44% gap to true value; the secondary shows 1.55x on its price against 1.34x on the GP's inherited figures.</td></tr>
+<tr><td>Invalid or duplicate insurer claims</td><td>11 of 277 invalid (4.0%); 3 duplicates</td><td>Orphan claims, losses before inception, and reports before the loss would distort loss ratios.</td></tr></table>
+<h2>Fund F03: NAV against the administrator</h2>
+<img src="nav_f03.png">
+<p class=small>Our NAV minus the administrator NAV, in basis points of administrator NAV. Every excursion beyond tolerance coincides with a flagged carried price, stale price or stale FX day.</p>
+<h2>Recommendations</h2>
+<div class=rec><b>1. Stop the line before reporting, and say why.</b> Run the quality gate between cleansing and reporting, and publish a NAV only when its carried, stale and stale-FX flags are zero or signed off. Evidence: 35 of 256 fund-days breached tolerance, all with a flagged cause. Measure: unexplained NAV breaches stay at zero; time to explain a breach falls from a morning's investigation to a lookup.</div>
+<div class=rec><b>2. Make identifiers effective-dated, with one owner.</b> Hold SEDOL, ISIN and CUSIP in a cross-reference with validity dates and a rule for conflicts, and resolve every feed through it as of the business date. Evidence: one ISIN change would have dropped 90 custodian rows under a current-identifier join; one SEDOL was claimed twice. Measure: unresolved-identifier rate held under 0.5% by the gate.</div>
+<div class=rec><b>3. Reconcile daily with a cause and an age.</b> Keep the custodian-to-OMS break report as a daily control with a cause hint (the trade that explains the gap, a missing position, or "unexplained") and escalate by age. Evidence: 3 of 5 breaks name the unbooked trade; the unexplained one is the case needing the corporate-action feed. Measure: median break age, and share of breaks with a named cause.</div>
+<h2>Insurance book and privacy</h2>
+<p>Claims pass three validation rules and de-duplication before reaching the marts; the illustrative loss ratios by product range from 36% to 78% (pro-rata earned premium, synthetic). Client names, e-mails, dates of birth and postcodes stay in a separate layer; analysts see a salted client key, an age band and a postcode district, filtered by region by role. The asset listing for the insurance account follows a Solvency II style but is illustrative, not a regulatory template.</p>
+<p class=small>Limits: single base currency (GBP), no subscriptions or redemptions, bonds without accrued interest, private-fund cashflows simplified (no recallable distributions or carried-interest waterfall); controls tuned to the fault classes planted here.</p>
+</body></html>

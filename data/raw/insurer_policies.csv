@@ -1,0 +1,401 @@
+policy_id,client_id,product,start_date,end_date,annual_premium,sum_insured,region,client_name,email,date_of_birth,postcode
+P000001,C0024,Motor,2025-12-06,2026-12-05,555.67,295000.0,Wales,Client 0024 (synthetic),client0024@example.invalid,1984-07-31,GH2 6BD
+P000002,C0026,Motor,2025-10-01,2026-09-30,271.83,1196000.0,South East,Client 0026 (synthetic),client0026@example.invalid,1978-07-21,CD11 3DB
+P000003,C0251,Commercial Property,2026-05-05,2027-05-04,437.79,1156000.0,Midlands,Client 0251 (synthetic),client0251@example.invalid,1980-02-15,AB11 2AD
+P000004,C0161,Commercial Property,2025-12-16,2026-12-15,881.57,640000.0,North West,Client 0161 (synthetic),client0161@example.invalid,1950-11-04,GH18 1BA
+P000005,C0110,Home,2026-09-11,2027-09-10,734.81,1682000.0,Wales,Client 0110 (synthetic),client0110@example.invalid,1981-08-03,EF9 3FA
+P000006,C0230,Motor,2026-02-19,2027-02-18,1113.19,1742000.0,Scotland,Client 0230 (synthetic),client0230@example.invalid,1980-09-04,AB9 1DD
+P000007,C0086,Liability,2026-08-02,2027-08-01,271.47,834000.0,Midlands,Client 0086 (synthetic),client0086@example.invalid,1957-08-23,AB3 3DD
+P000008,C0195,Motor,2026-04-15,2027-04-14,774.61,984000.0,London,Client 0195 (synthetic),client0195@example.invalid,1976-12-02,CD14 5FE
+P000009,C0036,Home,2026-09-16,2027-09-15,297.63,199000.0,Wales,Client 0036 (synthetic),client0036@example.invalid,1994-09-14,EF9 4GD
+P000010,C0176,Liability,2026-05-18,2027-05-17,582.03,713000.0,South East,Client 0176 (synthetic),client0176@example.invalid,1954-12-18,CD9 5ED
+P000011,C0085,Liability,2026-08-01,2027-07-31,726.5,738000.0,North West,Client 0085 (synthetic),client0085@example.invalid,1992-06-30,CD14 5GG
+P000012,C0289,Motor,2026-01-26,2027-01-25,479.79,199000.0,South East,Client 0289 (synthetic),client0289@example.invalid,1997-02-07,GH4 1DF
+P000013,C0016,Commercial Property,2025-10-09,2026-10-08,460.44,509000.0,South East,Client 0016 (synthetic),client0016@example.invalid,1958-07-08,AB1 7BE
+P000014,C0146,Home,2025-11-22,2026-11-21,390.39,52000.0,Wales,Client 0146 (synthetic),client0146@example.invalid,1963-04-29,AB16 1AD
+P000015,C0045,Home,2026-07-16,2027-07-15,355.04,1433000.0,South East,Client 0045 (synthetic),client0045@example.invalid,1991-11-07,GH10 4FB
+P000016,C0135,Liability,2025-10-26,2026-10-25,361.47,351000.0,Wales,Client 0135 (synthetic),client0135@example.invalid,1966-03-21,CD10 5AA
+P000017,C0061,Motor,2026-04-23,2027-04-22,1076.16,414000.0,North West,Client 0061 (synthetic),client0061@example.invalid,1994-03-22,AB12 5DB
+P000018,C0202,Motor,2026-08-21,2027-08-20,568.07,1095000.0,Scotland,Client 0202 (synthetic),client0202@example.invalid,1972-05-27,AB13 8DE
+P000019,C0273,Liability,2025-11-02,2026-11-01,361.78,357000.0,London,Client 0273 (synthetic),client0273@example.invalid,1994-10-23,GH15 3BF
+P000020,C0283,Liability,2025-11-22,2026-11-21,1213.57,76000.0,London,Client 0283 (synthetic),client0283@example.invalid,1982-05-11,GH17 6BD
+P000021,C0083,Motor,2025-10-06,2026-10-05,765.34,1136000.0,London,Client 0083 (synthetic),client0083@example.invalid,1954-01-22,EF12 8AA
+P000022,C0240,Home,2026-08-07,2027-08-06,439.12,739000.0,Midlands,Client 0240 (synthetic),client0240@example.invalid,1984-08-04,EF8 8DE
+P000023,C0249,Liability,2026-02-08,2027-02-07,302.54,642000.0,Scotland,Client 0249 (synthetic),client0249@example.invalid,1967-12-08,CD6 5FE
+P000024,C0076,Commercial Property,2026-08-30,2027-08-29,330.41,1876000.0,Scotland,Client 0076 (synthetic),client0076@example.invalid,1952-09-06,EF19 2FD
+P000025,C0071,Motor,2026-05-08,2027-05-07,706.44,851000.0,North West,Client 0071 (synthetic),client0071@example.invalid,1967-11-02,AB4 3GA
+P000026,C0259,Commercial Property,2026-02-21,2027-02-20,1196.34,375000.0,Wales,Client 0259 (synthetic),client0259@example.invalid,1971-12-06,AB3 4ED
+P000027,C0231,Liability,2026-07-24,2027-07-23,758.04,36000.0,Wales,Client 0231 (synthetic),client0231@example.invalid,1988-05-02,CD2 8BD
+P000028,C0085,Commercial Property,2026-07-25,2027-07-24,534.76,34000.0,London,Client 0085 (synthetic),client0085@example.invalid,1992-06-30,CD14 5GG
+P000029,C0208,Liability,2026-05-10,2027-05-09,1268.75,634000.0,London,Client 0208 (synthetic),client0208@example.invalid,1967-05-15,AB8 7DF
+P000030,C0150,Home,2025-12-08,2026-12-07,312.3,1047000.0,London,Client 0150 (synthetic),client0150@example.invalid,1995-03-01,AB8 2BA
+P000031,C0015,Liability,2025-10-26,2026-10-25,1011.36,813000.0,Wales,Client 0015 (synthetic),client0015@example.invalid,1978-01-29,AB14 4FB
+P000032,C0207,Home,2025-10-18,2026-10-17,694.1,56000.0,Midlands,Client 0207 (synthetic),client0207@example.invalid,1978-08-15,AB9 8FD
+P000033,C0109,Motor,2026-08-11,2027-08-10,1468.18,49000.0,Wales,Client 0109 (synthetic),client0109@example.invalid,1989-07-05,GH1 8AG
+P000034,C0073,Motor,2025-11-04,2026-11-03,275.67,34000.0,London,Client 0073 (synthetic),client0073@example.invalid,1991-06-21,CD13 4FA
+P000035,C0219,Liability,2026-03-21,2027-03-20,300.48,1027000.0,South East,Client 0219 (synthetic),client0219@example.invalid,1956-09-19,CD19 7AD
+P000036,C0117,Commercial Property,2026-06-22,2027-06-21,409.06,1983000.0,Wales,Client 0117 (synthetic),client0117@example.invalid,1979-04-28,CD12 8ED
+P000037,C0235,Liability,2025-11-11,2026-11-10,915.28,1102000.0,Midlands,Client 0235 (synthetic),client0235@example.invalid,1983-09-15,EF14 5FE
+P000038,C0146,Liability,2025-12-13,2026-12-12,1316.58,1662000.0,Scotland,Client 0146 (synthetic),client0146@example.invalid,1963-04-29,AB16 1AD
+P000039,C0291,Liability,2026-01-02,2027-01-01,414.31,146000.0,North West,Client 0291 (synthetic),client0291@example.invalid,1998-05-29,AB19 8DA
+P000040,C0247,Motor,2026-08-04,2027-08-03,362.34,796000.0,Midlands,Client 0247 (synthetic),client0247@example.invalid,1970-09-13,CD14 1EF
+P000041,C0094,Home,2026-09-26,2027-09-25,490.53,1171000.0,London,Client 0094 (synthetic),client0094@example.invalid,1967-06-06,EF8 2BG
+P000042,C0231,Motor,2025-11-09,2026-11-08,939.88,1887000.0,Wales,Client 0231 (synthetic),client0231@example.invalid,1988-05-02,CD2 8BD
+P000043,C0061,Liability,2026-03-22,2027-03-21,301.2,671000.0,Wales,Client 0061 (synthetic),client0061@example.invalid,1994-03-22,AB12 5DB
+P000044,C0110,Motor,2026-03-06,2027-03-05,1586.43,1554000.0,Midlands,Client 0110 (synthetic),client0110@example.invalid,1981-08-03,EF9 3FA
+P000045,C0091,Commercial Property,2026-08-28,2027-08-27,1010.14,1323000.0,South East,Client 0091 (synthetic),client0091@example.invalid,1983-07-16,EF4 3GB
+P000046,C0066,Motor,2026-01-28,2027-01-27,1166.12,410000.0,South East,Client 0066 (synthetic),client0066@example.invalid,1993-04-10,EF17 3FF
+P000047,C0183,Motor,2026-08-11,2027-08-10,266.31,59000.0,North West,Client 0183 (synthetic),client0183@example.invalid,1956-12-05,AB14 4BE
+P000048,C0108,Home,2025-10-06,2026-10-05,293.43,1887000.0,North West,Client 0108 (synthetic),client0108@example.invalid,1956-06-26,GH4 3BE
+P000049,C0092,Home,2025-11-04,2026-11-03,619.58,1411000.0,Midlands,Client 0092 (synthetic),client0092@example.invalid,1990-02-07,GH15 5GF
+P000050,C0163,Home,2026-03-26,2027-03-25,327.9,1967000.0,Wales,Client 0163 (synthetic),client0163@example.invalid,1971-09-18,AB10 2FA
+P000051,C0076,Commercial Property,2026-09-16,2027-09-15,654.25,1524000.0,Scotland,Client 0076 (synthetic),client0076@example.invalid,1952-09-06,EF19 2FD
+P000052,C0249,Commercial Property,2026-05-06,2027-05-05,546.03,1570000.0,Scotland,Client 0249 (synthetic),client0249@example.invalid,1967-12-08,CD6 5FE
+P000053,C0227,Home,2026-03-28,2027-03-27,744.06,1522000.0,Scotland,Client 0227 (synthetic),client0227@example.invalid,1959-11-11,GH12 5EE
+P000054,C0084,Home,2026-08-06,2027-08-05,512.8,353000.0,Scotland,Client 0084 (synthetic),client0084@example.invalid,1981-06-12,CD5 1EF
+P000055,C0251,Motor,2026-06-28,2027-06-27,783.46,1632000.0,North West,Client 0251 (synthetic),client0251@example.invalid,1980-02-15,AB11 2AD
+P000056,C0205,Liability,2026-02-20,2027-02-19,638.92,1928000.0,Scotland,Client 0205 (synthetic),client0205@example.invalid,1992-04-16,EF5 8EG
+P000057,C0258,Commercial Property,2026-02-02,2027-02-01,912.23,895000.0,Wales,Client 0258 (synthetic),client0258@example.invalid,1951-01-26,CD6 6FE
+P000058,C0147,Commercial Property,2026-04-20,2027-04-19,944.55,924000.0,South East,Client 0147 (synthetic),client0147@example.invalid,1978-08-23,AB6 3BF
+P000059,C0213,Home,2025-12-09,2026-12-08,507.43,653000.0,Wales,Client 0213 (synthetic),client0213@example.invalid,1999-06-23,CD19 5AE
+P000060,C0187,Motor,2026-09-05,2027-09-04,906.32,1839000.0,Midlands,Client 0187 (synthetic),client0187@example.invalid,1968-09-25,AB8 2BG
+P000061,C0045,Motor,2025-12-22,2026-12-21,260.62,422000.0,Scotland,Client 0045 (synthetic),client0045@example.invalid,1991-11-07,GH10 4FB
+P000062,C0165,Commercial Property,2026-06-08,2027-06-07,610.81,1143000.0,London,Client 0165 (synthetic),client0165@example.invalid,1958-04-23,CD8 7GD
+P000063,C0125,Motor,2026-06-13,2027-06-12,1146.74,813000.0,Scotland,Client 0125 (synthetic),client0125@example.invalid,1978-08-29,CD14 3DG
+P000064,C0224,Liability,2026-01-15,2027-01-14,1075.38,761000.0,South East,Client 0224 (synthetic),client0224@example.invalid,1973-10-05,EF5 8FG
+P000065,C0090,Motor,2025-10-03,2026-10-02,210.95,1715000.0,Scotland,Client 0090 (synthetic),client0090@example.invalid,1957-09-03,GH16 5EF
+P000066,C0228,Motor,2026-05-25,2027-05-24,515.91,730000.0,Midlands,Client 0228 (synthetic),client0228@example.invalid,1976-07-18,CD19 4EB
+P000067,C0140,Home,2025-10-27,2026-10-26,1074.89,1765000.0,South East,Client 0140 (synthetic),client0140@example.invalid,1994-07-11,EF16 6EA
+P000068,C0016,Motor,2025-12-24,2026-12-23,299.11,269000.0,London,Client 0016 (synthetic),client0016@example.invalid,1958-07-08,AB1 7BE
+P000069,C0106,Commercial Property,2026-09-27,2027-09-26,951.9,1499000.0,South East,Client 0106 (synthetic),client0106@example.invalid,1969-06-12,CD11 2GA
+P000070,C0011,Commercial Property,2025-10-27,2026-10-26,1780.06,579000.0,Scotland,Client 0011 (synthetic),client0011@example.invalid,1994-11-07,GH8 1BB
+P000071,C0102,Motor,2026-08-28,2027-08-27,929.07,1755000.0,South East,Client 0102 (synthetic),client0102@example.invalid,1981-03-13,EF1 7AA
+P000072,C0190,Motor,2025-11-16,2026-11-15,526.42,205000.0,Midlands,Client 0190 (synthetic),client0190@example.invalid,1989-07-28,GH9 1BB
+P000073,C0295,Motor,2026-06-22,2027-06-21,1108.41,447000.0,South East,Client 0295 (synthetic),client0295@example.invalid,1975-07-27,GH16 6GG
+P000074,C0142,Home,2026-05-19,2027-05-18,997.26,1755000.0,Scotland,Client 0142 (synthetic),client0142@example.invalid,1968-03-10,CD10 4DF
+P000075,C0297,Motor,2026-08-25,2027-08-24,853.86,201000.0,Midlands,Client 0297 (synthetic),client0297@example.invalid,1998-12-24,EF10 6EF
+P000076,C0201,Home,2025-10-29,2026-10-28,588.33,831000.0,Midlands,Client 0201 (synthetic),client0201@example.invalid,1978-08-31,CD5 5GB
+P000077,C0027,Commercial Property,2025-11-27,2026-11-26,1374.65,963000.0,London,Client 0027 (synthetic),client0027@example.invalid,1998-04-09,EF14 5DE
+P000078,C0243,Motor,2026-03-25,2027-03-24,605.1,1188000.0,Midlands,Client 0243 (synthetic),client0243@example.invalid,1994-02-26,GH4 8GD
+P000079,C0189,Home,2026-04-27,2027-04-26,454.59,315000.0,Scotland,Client 0189 (synthetic),client0189@example.invalid,1997-07-30,CD5 7EF
+P000080,C0226,Home,2026-04-26,2027-04-25,1494.55,1470000.0,London,Client 0226 (synthetic),client0226@example.invalid,1951-09-29,AB3 6DB
+P000081,C0120,Home,2026-07-10,2027-07-09,435.09,209000.0,Scotland,Client 0120 (synthetic),client0120@example.invalid,1959-05-21,EF18 8GE
+P000082,C0003,Home,2026-05-19,2027-05-18,326.8,330000.0,London,Client 0003 (synthetic),client0003@example.invalid,1973-11-14,AB1 7AD
+P000083,C0036,Commercial Property,2025-12-07,2026-12-06,170.6,584000.0,North West,Client 0036 (synthetic),client0036@example.invalid,1994-09-14,EF9 4GD
+P000084,C0276,Liability,2025-10-15,2026-10-14,813.35,534000.0,South East,Client 0276 (synthetic),client0276@example.invalid,1954-12-15,EF6 2BD
+P000085,C0114,Home,2026-07-27,2027-07-26,199.36,1005000.0,London,Client 0114 (synthetic),client0114@example.invalid,1968-05-25,CD2 7DA
+P000086,C0263,Home,2025-12-07,2026-12-06,1489.95,1814000.0,Midlands,Client 0263 (synthetic),client0263@example.invalid,1962-04-14,EF9 2FG
+P000087,C0153,Home,2026-01-25,2027-01-24,323.08,794000.0,London,Client 0153 (synthetic),client0153@example.invalid,1970-07-19,AB12 5EG
+P000088,C0275,Motor,2025-11-28,2026-11-27,971.67,1700000.0,Midlands,Client 0275 (synthetic),client0275@example.invalid,1954-04-12,EF2 8GA
+P000089,C0001,Home,2026-01-04,2027-01-03,659.51,1264000.0,Midlands,Client 0001 (synthetic),client0001@example.invalid,1995-01-20,CD4 4GF
+P000090,C0106,Motor,2025-10-30,2026-10-29,989.52,548000.0,Scotland,Client 0106 (synthetic),client0106@example.invalid,1969-06-12,CD11 2GA
+P000091,C0166,Home,2026-07-31,2027-07-30,657.99,591000.0,Midlands,Client 0166 (synthetic),client0166@example.invalid,1995-12-17,EF12 5FG
+P000092,C0008,Motor,2026-07-23,2027-07-22,663.17,316000.0,London,Client 0008 (synthetic),client0008@example.invalid,1983-11-23,CD3 2DE
+P000093,C0103,Commercial Property,2026-01-05,2027-01-04,1146.36,1512000.0,South East,Client 0103 (synthetic),client0103@example.invalid,1986-04-30,EF16 8AD
+P000094,C0032,Home,2026-01-12,2027-01-11,300.81,374000.0,North West,Client 0032 (synthetic),client0032@example.invalid,1960-05-26,EF17 3FG
+P000095,C0201,Liability,2026-04-19,2027-04-18,1328.48,310000.0,Wales,Client 0201 (synthetic),client0201@example.invalid,1978-08-31,CD5 5GB
+P000096,C0117,Home,2026-08-20,2027-08-19,524.32,1056000.0,Scotland,Client 0117 (synthetic),client0117@example.invalid,1979-04-28,CD12 8ED
+P000097,C0123,Commercial Property,2026-04-15,2027-04-14,911.13,204000.0,Midlands,Client 0123 (synthetic),client0123@example.invalid,1965-03-03,CD6 1ED
+P000098,C0146,Home,2025-10-22,2026-10-21,264.54,333000.0,Scotland,Client 0146 (synthetic),client0146@example.invalid,1963-04-29,AB16 1AD
+P000099,C0287,Motor,2026-06-20,2027-06-19,637.45,820000.0,London,Client 0287 (synthetic),client0287@example.invalid,1998-03-11,EF16 5EE
+P000100,C0202,Home,2026-05-30,2027-05-29,346.76,1581000.0,Scotland,Client 0202 (synthetic),client0202@example.invalid,1972-05-27,AB13 8DE
+P000101,C0087,Home,2026-06-15,2027-06-14,951.23,340000.0,North West,Client 0087 (synthetic),client0087@example.invalid,1959-01-22,EF5 4EB
+P000102,C0296,Motor,2026-04-07,2027-04-06,904.52,471000.0,London,Client 0296 (synthetic),client0296@example.invalid,1989-11-12,CD9 6AB
+P000103,C0048,Liability,2026-05-28,2027-05-27,857.5,1538000.0,Midlands,Client 0048 (synthetic),client0048@example.invalid,1992-06-29,EF6 1BE
+P000104,C0248,Home,2026-04-09,2027-04-08,1606.97,658000.0,London,Client 0248 (synthetic),client0248@example.invalid,1958-10-21,AB2 4DA
+P000105,C0184,Liability,2025-11-11,2026-11-10,927.97,208000.0,South East,Client 0184 (synthetic),client0184@example.invalid,1991-05-20,AB13 7DF
+P000106,C0133,Motor,2026-04-11,2027-04-10,556.0,885000.0,Scotland,Client 0133 (synthetic),client0133@example.invalid,1971-04-28,AB9 2ED
+P000107,C0258,Motor,2025-10-03,2026-10-02,1221.3,885000.0,Wales,Client 0258 (synthetic),client0258@example.invalid,1951-01-26,CD6 6FE
+P000108,C0121,Liability,2026-08-13,2027-08-12,613.29,1848000.0,London,Client 0121 (synthetic),client0121@example.invalid,1970-11-09,GH18 8DF
+P000109,C0073,Home,2026-01-04,2027-01-03,387.86,1864000.0,London,Client 0073 (synthetic),client0073@example.invalid,1991-06-21,CD13 4FA
+P000110,C0294,Home,2026-02-23,2027-02-22,1876.35,1780000.0,Scotland,Client 0294 (synthetic),client0294@example.invalid,1996-03-27,GH12 1ED
+P000111,C0039,Commercial Property,2026-03-22,2027-03-21,716.79,1256000.0,North West,Client 0039 (synthetic),client0039@example.invalid,1952-04-10,CD18 2FG
+P000112,C0003,Motor,2026-06-01,2027-05-31,869.8,1503000.0,North West,Client 0003 (synthetic),client0003@example.invalid,1973-11-14,AB1 7AD
+P000113,C0192,Motor,2026-07-26,2027-07-25,793.35,1688000.0,Midlands,Client 0192 (synthetic),client0192@example.invalid,1990-04-21,GH18 3EE
+P000114,C0256,Commercial Property,2026-04-20,2027-04-19,537.8,416000.0,London,Client 0256 (synthetic),client0256@example.invalid,1950-01-18,EF17 1AE
+P000115,C0039,Home,2026-02-17,2027-02-16,458.9,870000.0,Wales,Client 0039 (synthetic),client0039@example.invalid,1952-04-10,CD18 2FG
+P000116,C0277,Home,2025-10-07,2026-10-06,956.59,1472000.0,London,Client 0277 (synthetic),client0277@example.invalid,1976-02-05,CD5 7BE
+P000117,C0270,Motor,2026-01-16,2027-01-15,545.91,1986000.0,South East,Client 0270 (synthetic),client0270@example.invalid,1952-09-07,AB2 3DE
+P000118,C0288,Motor,2026-05-07,2027-05-06,330.71,1376000.0,Midlands,Client 0288 (synthetic),client0288@example.invalid,1993-04-06,AB1 6DA
+P000119,C0227,Home,2026-07-12,2027-07-11,1558.31,564000.0,Wales,Client 0227 (synthetic),client0227@example.invalid,1959-11-11,GH12 5EE
+P000120,C0198,Motor,2025-11-18,2026-11-17,584.35,305000.0,London,Client 0198 (synthetic),client0198@example.invalid,1968-07-08,GH9 3AD
+P000121,C0002,Liability,2026-02-14,2027-02-13,307.1,1631000.0,North West,Client 0002 (synthetic),client0002@example.invalid,1996-03-17,GH9 4EA
+P000122,C0162,Motor,2025-12-05,2026-12-04,172.4,1058000.0,South East,Client 0162 (synthetic),client0162@example.invalid,1963-01-21,EF14 2BG
+P000123,C0246,Home,2026-08-30,2027-08-29,404.09,666000.0,South East,Client 0246 (synthetic),client0246@example.invalid,1951-12-27,AB9 5DE
+P000124,C0266,Home,2026-03-08,2027-03-07,906.11,1816000.0,Wales,Client 0266 (synthetic),client0266@example.invalid,1957-03-18,CD1 1GD
+P000125,C0210,Motor,2025-12-27,2026-12-26,650.58,303000.0,London,Client 0210 (synthetic),client0210@example.invalid,1970-06-07,CD9 5AD
+P000126,C0066,Motor,2025-10-08,2026-10-07,1050.43,769000.0,Scotland,Client 0066 (synthetic),client0066@example.invalid,1993-04-10,EF17 3FF
+P000127,C0242,Commercial Property,2026-09-02,2027-09-01,671.73,841000.0,North West,Client 0242 (synthetic),client0242@example.invalid,1981-10-22,EF3 7EG
+P000128,C0207,Liability,2025-12-16,2026-12-15,893.15,1760000.0,Midlands,Client 0207 (synthetic),client0207@example.invalid,1978-08-15,AB9 8FD
+P000129,C0164,Home,2026-08-15,2027-08-14,707.16,1439000.0,London,Client 0164 (synthetic),client0164@example.invalid,1982-11-05,CD12 2AD
+P000130,C0202,Motor,2025-12-14,2026-12-13,852.51,269000.0,North West,Client 0202 (synthetic),client0202@example.invalid,1972-05-27,AB13 8DE
+P000131,C0184,Motor,2026-04-20,2027-04-19,714.31,1402000.0,London,Client 0184 (synthetic),client0184@example.invalid,1991-05-20,AB13 7DF
+P000132,C0072,Motor,2026-09-08,2027-09-07,370.18,1291000.0,North West,Client 0072 (synthetic),client0072@example.invalid,1970-05-15,CD10 8FB
+P000133,C0149,Liability,2025-12-07,2026-12-06,1047.15,1883000.0,Midlands,Client 0149 (synthetic),client0149@example.invalid,1960-05-04,EF10 6FF
+P000134,C0276,Motor,2026-01-04,2027-01-03,1107.83,1790000.0,London,Client 0276 (synthetic),client0276@example.invalid,1954-12-15,EF6 2BD
+P000135,C0094,Motor,2025-12-29,2026-12-28,327.43,1358000.0,North West,Client 0094 (synthetic),client0094@example.invalid,1967-06-06,EF8 2BG
+P000136,C0270,Home,2026-02-26,2027-02-25,1294.27,1440000.0,South East,Client 0270 (synthetic),client0270@example.invalid,1952-09-07,AB2 3DE
+P000137,C0200,Home,2025-12-21,2026-12-20,1119.52,741000.0,Wales,Client 0200 (synthetic),client0200@example.invalid,1974-01-28,CD2 2ED
+P000138,C0048,Home,2025-12-13,2026-12-12,655.13,1318000.0,North West,Client 0048 (synthetic),client0048@example.invalid,1992-06-29,EF6 1BE
+P000139,C0263,Liability,2025-10-11,2026-10-10,801.64,619000.0,South East,Client 0263 (synthetic),client0263@example.invalid,1962-04-14,EF9 2FG
+P000140,C0215,Motor,2026-01-01,2026-12-31,1054.93,199000.0,London,Client 0215 (synthetic),client0215@example.invalid,1963-10-14,GH6 5BE
+P000141,C0095,Motor,2026-02-26,2027-02-25,541.7,1994000.0,Scotland,Client 0095 (synthetic),client0095@example.invalid,1955-06-09,CD8 6FB
+P000142,C0184,Motor,2026-01-30,2027-01-29,413.25,210000.0,Midlands,Client 0184 (synthetic),client0184@example.invalid,1991-05-20,AB13 7DF
+P000143,C0016,Motor,2026-04-11,2027-04-10,360.31,660000.0,Scotland,Client 0016 (synthetic),client0016@example.invalid,1958-07-08,AB1 7BE
+P000144,C0136,Liability,2026-08-17,2027-08-16,946.72,1993000.0,Midlands,Client 0136 (synthetic),client0136@example.invalid,1983-12-30,AB16 3BD
+P000145,C0031,Motor,2026-04-18,2027-04-17,453.58,654000.0,Scotland,Client 0031 (synthetic),client0031@example.invalid,1952-07-09,EF6 4FB
+P000146,C0257,Home,2026-09-01,2027-08-31,458.7,826000.0,Wales,Client 0257 (synthetic),client0257@example.invalid,1994-12-16,GH3 3GB
+P000147,C0142,Commercial Property,2026-09-04,2027-09-03,716.44,181000.0,London,Client 0142 (synthetic),client0142@example.invalid,1968-03-10,CD10 4DF
+P000148,C0102,Liability,2026-06-16,2027-06-15,557.92,1099000.0,Scotland,Client 0102 (synthetic),client0102@example.invalid,1981-03-13,EF1 7AA
+P000149,C0114,Motor,2026-01-31,2027-01-30,423.09,228000.0,North West,Client 0114 (synthetic),client0114@example.invalid,1968-05-25,CD2 7DA
+P000150,C0004,Motor,2025-11-20,2026-11-19,160.99,1413000.0,London,Client 0004 (synthetic),client0004@example.invalid,1951-07-03,AB12 5AG
+P000151,C0261,Home,2025-10-24,2026-10-23,1523.01,1719000.0,Midlands,Client 0261 (synthetic),client0261@example.invalid,1955-08-13,CD1 3EA
+P000152,C0147,Motor,2026-02-23,2027-02-22,686.07,39000.0,Scotland,Client 0147 (synthetic),client0147@example.invalid,1978-08-23,AB6 3BF
+P000153,C0281,Commercial Property,2025-10-05,2026-10-04,1293.74,1910000.0,Wales,Client 0281 (synthetic),client0281@example.invalid,1987-01-21,AB14 8AD
+P000154,C0009,Home,2025-12-28,2026-12-27,476.25,1813000.0,Wales,Client 0009 (synthetic),client0009@example.invalid,1989-10-14,GH6 3DE
+P000155,C0111,Motor,2026-07-19,2027-07-18,321.36,531000.0,South East,Client 0111 (synthetic),client0111@example.invalid,1956-07-10,EF12 4BG
+P000156,C0093,Home,2026-07-02,2027-07-01,488.86,1144000.0,Scotland,Client 0093 (synthetic),client0093@example.invalid,1958-08-19,AB5 5AA
+P000157,C0058,Motor,2026-05-17,2027-05-16,335.86,1878000.0,Midlands,Client 0058 (synthetic),client0058@example.invalid,1996-01-27,AB17 1ED
+P000158,C0148,Commercial Property,2026-09-08,2027-09-07,1403.48,1100000.0,London,Client 0148 (synthetic),client0148@example.invalid,1956-03-08,EF15 6FD
+P000159,C0280,Motor,2026-05-29,2027-05-28,364.58,590000.0,North West,Client 0280 (synthetic),client0280@example.invalid,1988-08-03,EF12 8EA
+P000160,C0178,Motor,2025-10-19,2026-10-18,1141.28,219000.0,Wales,Client 0178 (synthetic),client0178@example.invalid,1997-01-27,CD12 3FB
+P000161,C0283,Home,2026-06-19,2027-06-18,794.82,1875000.0,Scotland,Client 0283 (synthetic),client0283@example.invalid,1982-05-11,GH17 6BD
+P000162,C0294,Commercial Property,2026-08-24,2027-08-23,1092.95,506000.0,London,Client 0294 (synthetic),client0294@example.invalid,1996-03-27,GH12 1ED
+P000163,C0102,Liability,2025-11-18,2026-11-17,542.13,1141000.0,London,Client 0102 (synthetic),client0102@example.invalid,1981-03-13,EF1 7AA
+P000164,C0045,Home,2026-02-05,2027-02-04,1830.56,1663000.0,Wales,Client 0045 (synthetic),client0045@example.invalid,1991-11-07,GH10 4FB
+P000165,C0117,Home,2026-03-13,2027-03-12,573.61,300000.0,Wales,Client 0117 (synthetic),client0117@example.invalid,1979-04-28,CD12 8ED
+P000166,C0214,Commercial Property,2026-07-18,2027-07-17,667.21,1836000.0,North West,Client 0214 (synthetic),client0214@example.invalid,1959-08-06,GH18 8DF
+P000167,C0112,Home,2025-10-29,2026-10-28,114.46,695000.0,Scotland,Client 0112 (synthetic),client0112@example.invalid,1961-11-19,GH8 8BE
+P000168,C0163,Home,2025-11-09,2026-11-08,799.62,1737000.0,Wales,Client 0163 (synthetic),client0163@example.invalid,1971-09-18,AB10 2FA
+P000169,C0170,Motor,2025-12-21,2026-12-20,1252.05,1185000.0,South East,Client 0170 (synthetic),client0170@example.invalid,1980-03-08,CD4 4DF
+P000170,C0064,Motor,2025-12-31,2026-12-30,518.69,1200000.0,Scotland,Client 0064 (synthetic),client0064@example.invalid,1955-05-15,AB8 5BB
+P000171,C0157,Home,2025-12-06,2026-12-05,368.19,1925000.0,Midlands,Client 0157 (synthetic),client0157@example.invalid,1961-02-13,GH9 4BB
+P000172,C0175,Commercial Property,2026-03-21,2027-03-20,827.93,226000.0,North West,Client 0175 (synthetic),client0175@example.invalid,1993-06-17,CD13 2AA
+P000173,C0096,Liability,2026-03-29,2027-03-28,890.5,277000.0,North West,Client 0096 (synthetic),client0096@example.invalid,1968-06-06,EF12 5BF
+P000174,C0246,Commercial Property,2025-11-17,2026-11-16,287.16,121000.0,Midlands,Client 0246 (synthetic),client0246@example.invalid,1951-12-27,AB9 5DE
+P000175,C0103,Commercial Property,2026-04-30,2027-04-29,843.76,1162000.0,Wales,Client 0103 (synthetic),client0103@example.invalid,1986-04-30,EF16 8AD
+P000176,C0242,Commercial Property,2026-01-13,2027-01-12,452.3,1890000.0,Wales,Client 0242 (synthetic),client0242@example.invalid,1981-10-22,EF3 7EG
+P000177,C0220,Commercial Property,2025-12-14,2026-12-13,315.96,943000.0,Midlands,Client 0220 (synthetic),client0220@example.invalid,1984-09-19,EF17 2BD
+P000178,C0035,Liability,2026-08-17,2027-08-16,1902.71,536000.0,Midlands,Client 0035 (synthetic),client0035@example.invalid,1963-06-06,GH15 7BA
+P000179,C0140,Home,2026-09-30,2027-09-29,1409.83,625000.0,Scotland,Client 0140 (synthetic),client0140@example.invalid,1994-07-11,EF16 6EA
+P000180,C0155,Liability,2026-05-06,2027-05-05,774.31,1741000.0,Midlands,Client 0155 (synthetic),client0155@example.invalid,1982-06-27,GH11 6GE
+P000181,C0215,Home,2025-11-04,2026-11-03,65.9,1566000.0,Midlands,Client 0215 (synthetic),client0215@example.invalid,1963-10-14,GH6 5BE
+P000182,C0030,Motor,2026-07-03,2027-07-02,1750.86,344000.0,Midlands,Client 0030 (synthetic),client0030@example.invalid,1996-12-03,AB6 4EB
+P000183,C0070,Home,2025-12-25,2026-12-24,520.27,395000.0,London,Client 0070 (synthetic),client0070@example.invalid,1953-12-03,CD14 6FB
+P000184,C0078,Motor,2025-12-30,2026-12-29,974.6,1632000.0,South East,Client 0078 (synthetic),client0078@example.invalid,1983-09-08,AB10 1AB
+P000185,C0033,Motor,2026-07-02,2027-07-01,603.87,1058000.0,North West,Client 0033 (synthetic),client0033@example.invalid,1995-10-06,AB9 2GF
+P000186,C0280,Motor,2025-11-12,2026-11-11,598.64,1722000.0,London,Client 0280 (synthetic),client0280@example.invalid,1988-08-03,EF12 8EA
+P000187,C0031,Motor,2026-05-25,2027-05-24,295.55,555000.0,Scotland,Client 0031 (synthetic),client0031@example.invalid,1952-07-09,EF6 4FB
+P000188,C0206,Motor,2026-04-03,2027-04-02,652.18,252000.0,North West,Client 0206 (synthetic),client0206@example.invalid,1970-01-25,AB18 2ED
+P000189,C0236,Motor,2026-07-22,2027-07-21,1314.84,194000.0,South East,Client 0236 (synthetic),client0236@example.invalid,1985-07-15,GH18 8BA
+P000190,C0092,Motor,2025-10-15,2026-10-14,902.95,1154000.0,Midlands,Client 0092 (synthetic),client0092@example.invalid,1990-02-07,GH15 5GF
+P000191,C0169,Motor,2026-06-24,2027-06-23,1135.82,560000.0,London,Client 0169 (synthetic),client0169@example.invalid,1988-05-18,EF8 7BD
+P000192,C0195,Motor,2025-11-06,2026-11-05,1263.61,1190000.0,London,Client 0195 (synthetic),client0195@example.invalid,1976-12-02,CD14 5FE
+P000193,C0109,Motor,2026-01-20,2027-01-19,331.0,303000.0,Wales,Client 0109 (synthetic),client0109@example.invalid,1989-07-05,GH1 8AG
+P000194,C0252,Home,2026-07-06,2027-07-05,921.21,1538000.0,Scotland,Client 0252 (synthetic),client0252@example.invalid,1957-04-08,CD1 1ED
+P000195,C0024,Liability,2025-11-10,2026-11-09,744.8,1947000.0,South East,Client 0024 (synthetic),client0024@example.invalid,1984-07-31,GH2 6BD
+P000196,C0199,Home,2025-10-20,2026-10-19,433.21,72000.0,North West,Client 0199 (synthetic),client0199@example.invalid,1987-01-06,CD17 1BB
+P000197,C0115,Motor,2025-11-19,2026-11-18,423.01,789000.0,South East,Client 0115 (synthetic),client0115@example.invalid,1995-05-20,GH4 5FA
+P000198,C0259,Motor,2025-11-05,2026-11-04,754.6,883000.0,Midlands,Client 0259 (synthetic),client0259@example.invalid,1971-12-06,AB3 4ED
+P000199,C0017,Commercial Property,2026-05-15,2027-05-14,399.6,410000.0,Midlands,Client 0017 (synthetic),client0017@example.invalid,1954-04-16,AB1 2FF
+P000200,C0008,Liability,2026-06-02,2027-06-01,448.31,275000.0,Scotland,Client 0008 (synthetic),client0008@example.invalid,1983-11-23,CD3 2DE
+P000201,C0159,Motor,2026-07-25,2027-07-24,218.0,1643000.0,North West,Client 0159 (synthetic),client0159@example.invalid,1961-04-13,AB4 8BD
+P000202,C0035,Motor,2026-01-13,2027-01-12,594.08,1370000.0,Scotland,Client 0035 (synthetic),client0035@example.invalid,1963-06-06,GH15 7BA
+P000203,C0280,Motor,2026-07-21,2027-07-20,182.61,99000.0,Wales,Client 0280 (synthetic),client0280@example.invalid,1988-08-03,EF12 8EA
+P000204,C0037,Home,2025-12-09,2026-12-08,1491.4,1780000.0,Midlands,Client 0037 (synthetic),client0037@example.invalid,1974-07-17,CD16 4GD
+P000205,C0197,Home,2026-06-05,2027-06-04,644.13,376000.0,London,Client 0197 (synthetic),client0197@example.invalid,1955-09-14,GH12 5FA
+P000206,C0161,Home,2026-06-23,2027-06-22,1243.55,228000.0,Midlands,Client 0161 (synthetic),client0161@example.invalid,1950-11-04,GH18 1BA
+P000207,C0089,Home,2026-02-20,2027-02-19,1386.77,579000.0,South East,Client 0089 (synthetic),client0089@example.invalid,1960-11-01,GH10 6BE
+P000208,C0224,Home,2025-10-18,2026-10-17,774.45,1233000.0,Midlands,Client 0224 (synthetic),client0224@example.invalid,1973-10-05,EF5 8FG
+P000209,C0010,Motor,2026-09-17,2027-09-16,1027.9,853000.0,North West,Client 0010 (synthetic),client0010@example.invalid,1953-08-22,CD4 1DB
+P000210,C0085,Liability,2026-03-23,2027-03-22,531.19,657000.0,Wales,Client 0085 (synthetic),client0085@example.invalid,1992-06-30,CD14 5GG
+P000211,C0180,Motor,2026-05-15,2027-05-14,878.92,1576000.0,Wales,Client 0180 (synthetic),client0180@example.invalid,1993-04-23,GH7 2DF
+P000212,C0038,Motor,2026-02-04,2027-02-03,932.68,1434000.0,Wales,Client 0038 (synthetic),client0038@example.invalid,1950-03-02,EF11 7BG
+P000213,C0285,Commercial Property,2026-03-20,2027-03-19,227.6,433000.0,South East,Client 0285 (synthetic),client0285@example.invalid,1960-04-05,EF18 2AF
+P000214,C0266,Commercial Property,2026-07-15,2027-07-14,334.06,1675000.0,Midlands,Client 0266 (synthetic),client0266@example.invalid,1957-03-18,CD1 1GD
+P000215,C0213,Liability,2026-09-04,2027-09-03,433.28,1814000.0,South East,Client 0213 (synthetic),client0213@example.invalid,1999-06-23,CD19 5AE
+P000216,C0016,Liability,2025-10-05,2026-10-04,280.54,543000.0,Midlands,Client 0016 (synthetic),client0016@example.invalid,1958-07-08,AB1 7BE
+P000217,C0280,Home,2025-10-25,2026-10-24,343.01,1146000.0,Scotland,Client 0280 (synthetic),client0280@example.invalid,1988-08-03,EF12 8EA
+P000218,C0217,Home,2026-09-23,2027-09-22,916.52,605000.0,Wales,Client 0217 (synthetic),client0217@example.invalid,1967-08-20,EF18 3BB
+P000219,C0126,Motor,2025-10-18,2026-10-17,544.11,1712000.0,Scotland,Client 0126 (synthetic),client0126@example.invalid,1953-09-19,EF15 7DD
+P000220,C0262,Motor,2026-08-30,2027-08-29,919.64,875000.0,Wales,Client 0262 (synthetic),client0262@example.invalid,1956-01-11,AB13 5GE
+P000221,C0270,Motor,2026-08-22,2027-08-21,485.91,317000.0,South East,Client 0270 (synthetic),client0270@example.invalid,1952-09-07,AB2 3DE
+P000222,C0102,Home,2026-01-02,2027-01-01,846.09,50000.0,South East,Client 0102 (synthetic),client0102@example.invalid,1981-03-13,EF1 7AA
+P000223,C0202,Home,2026-04-30,2027-04-29,491.59,819000.0,Midlands,Client 0202 (synthetic),client0202@example.invalid,1972-05-27,AB13 8DE
+P000224,C0243,Motor,2026-01-04,2027-01-03,157.92,1973000.0,North West,Client 0243 (synthetic),client0243@example.invalid,1994-02-26,GH4 8GD
+P000225,C0134,Home,2025-12-03,2026-12-02,982.17,142000.0,North West,Client 0134 (synthetic),client0134@example.invalid,1967-09-25,GH13 2EE
+P000226,C0216,Motor,2026-04-05,2027-04-04,1318.01,1314000.0,London,Client 0216 (synthetic),client0216@example.invalid,1996-07-21,GH1 1DB
+P000227,C0238,Commercial Property,2026-05-04,2027-05-03,426.25,1767000.0,Midlands,Client 0238 (synthetic),client0238@example.invalid,1995-12-08,EF11 2GB
+P000228,C0128,Motor,2026-05-18,2027-05-17,476.69,1448000.0,Scotland,Client 0128 (synthetic),client0128@example.invalid,1978-05-05,AB13 5BD
+P000229,C0145,Commercial Property,2025-12-28,2026-12-27,707.94,802000.0,Scotland,Client 0145 (synthetic),client0145@example.invalid,1986-07-30,CD15 6EF
+P000230,C0176,Home,2025-10-01,2026-09-30,188.06,144000.0,London,Client 0176 (synthetic),client0176@example.invalid,1954-12-18,CD9 5ED
+P000231,C0207,Motor,2026-04-23,2027-04-22,116.56,1736000.0,Wales,Client 0207 (synthetic),client0207@example.invalid,1978-08-15,AB9 8FD
+P000232,C0135,Home,2026-01-06,2027-01-05,272.58,1535000.0,South East,Client 0135 (synthetic),client0135@example.invalid,1966-03-21,CD10 5AA
+P000233,C0109,Home,2026-02-03,2027-02-02,666.5,1950000.0,Midlands,Client 0109 (synthetic),client0109@example.invalid,1989-07-05,GH1 8AG
+P000234,C0025,Liability,2025-12-16,2026-12-15,320.89,1985000.0,Midlands,Client 0025 (synthetic),client0025@example.invalid,1973-07-20,CD19 3FF
+P000235,C0089,Home,2026-03-01,2027-02-28,655.22,966000.0,South East,Client 0089 (synthetic),client0089@example.invalid,1960-11-01,GH10 6BE
+P000236,C0296,Motor,2026-08-08,2027-08-07,1056.74,1832000.0,Midlands,Client 0296 (synthetic),client0296@example.invalid,1989-11-12,CD9 6AB
+P000237,C0212,Liability,2026-05-18,2027-05-17,947.9,325000.0,Scotland,Client 0212 (synthetic),client0212@example.invalid,1963-08-15,AB6 8FD
+P000238,C0042,Home,2026-09-09,2027-09-08,368.8,426000.0,Wales,Client 0042 (synthetic),client0042@example.invalid,1954-02-13,GH4 6GB
+P000239,C0291,Motor,2025-10-24,2026-10-23,716.93,1532000.0,Midlands,Client 0291 (synthetic),client0291@example.invalid,1998-05-29,AB19 8DA
+P000240,C0233,Home,2026-05-16,2027-05-15,472.67,1786000.0,South East,Client 0233 (synthetic),client0233@example.invalid,1989-12-30,CD11 6DF
+P000241,C0149,Home,2026-04-13,2027-04-12,462.16,1896000.0,London,Client 0149 (synthetic),client0149@example.invalid,1960-05-04,EF10 6FF
+P000242,C0088,Motor,2026-03-27,2027-03-26,255.72,1317000.0,North West,Client 0088 (synthetic),client0088@example.invalid,1981-12-07,AB16 1BF
+P000243,C0228,Motor,2026-02-22,2027-02-21,261.84,341000.0,Scotland,Client 0228 (synthetic),client0228@example.invalid,1976-07-18,CD19 4EB
+P000244,C0110,Motor,2026-04-09,2027-04-08,1064.36,1083000.0,London,Client 0110 (synthetic),client0110@example.invalid,1981-08-03,EF9 3FA
+P000245,C0252,Liability,2026-08-15,2027-08-14,442.3,1635000.0,Scotland,Client 0252 (synthetic),client0252@example.invalid,1957-04-08,CD1 1ED
+P000246,C0021,Commercial Property,2026-05-17,2027-05-16,1026.92,1468000.0,Midlands,Client 0021 (synthetic),client0021@example.invalid,1996-09-14,EF17 8BA
+P000247,C0152,Liability,2026-05-19,2027-05-18,476.22,754000.0,South East,Client 0152 (synthetic),client0152@example.invalid,1979-11-25,AB2 6FB
+P000248,C0041,Motor,2025-11-08,2026-11-07,731.27,1049000.0,North West,Client 0041 (synthetic),client0041@example.invalid,1990-12-11,GH3 5ED
+P000249,C0081,Home,2026-09-26,2027-09-25,716.68,623000.0,North West,Client 0081 (synthetic),client0081@example.invalid,1952-06-26,GH6 6BB
+P000250,C0002,Home,2025-11-27,2026-11-26,1099.8,644000.0,Wales,Client 0002 (synthetic),client0002@example.invalid,1996-03-17,GH9 4EA
+P000251,C0267,Motor,2026-06-18,2027-06-17,716.75,1582000.0,North West,Client 0267 (synthetic),client0267@example.invalid,1981-12-19,AB7 5EE
+P000252,C0016,Commercial Property,2026-08-17,2027-08-16,1383.38,502000.0,South East,Client 0016 (synthetic),client0016@example.invalid,1958-07-08,AB1 7BE
+P000253,C0156,Liability,2026-01-09,2027-01-08,385.49,1205000.0,Midlands,Client 0156 (synthetic),client0156@example.invalid,1959-07-30,AB3 8FA
+P000254,C0002,Home,2026-05-30,2027-05-29,1129.44,854000.0,Wales,Client 0002 (synthetic),client0002@example.invalid,1996-03-17,GH9 4EA
+P000255,C0250,Motor,2026-02-17,2027-02-16,1622.65,1342000.0,North West,Client 0250 (synthetic),client0250@example.invalid,1954-05-06,EF17 5AF
+P000256,C0251,Home,2026-03-24,2027-03-23,715.59,1864000.0,Wales,Client 0251 (synthetic),client0251@example.invalid,1980-02-15,AB11 2AD
+P000257,C0258,Motor,2026-04-07,2027-04-06,328.76,1246000.0,Scotland,Client 0258 (synthetic),client0258@example.invalid,1951-01-26,CD6 6FE
+P000258,C0252,Home,2026-09-04,2027-09-03,771.36,1724000.0,South East,Client 0252 (synthetic),client0252@example.invalid,1957-04-08,CD1 1ED
+P000259,C0040,Motor,2026-02-05,2027-02-04,183.31,581000.0,Wales,Client 0040 (synthetic),client0040@example.invalid,1985-05-13,AB17 7FA
+P000260,C0029,Motor,2026-08-17,2027-08-16,379.64,393000.0,North West,Client 0029 (synthetic),client0029@example.invalid,1978-09-19,CD3 1ED
+P000261,C0075,Motor,2025-12-18,2026-12-17,642.05,996000.0,Midlands,Client 0075 (synthetic),client0075@example.invalid,1952-10-10,CD19 7EG
+P000262,C0143,Home,2025-10-12,2026-10-11,399.28,1834000.0,Scotland,Client 0143 (synthetic),client0143@example.invalid,1993-12-24,AB11 5BF
+P000263,C0160,Motor,2026-06-28,2027-06-27,971.85,1522000.0,Scotland,Client 0160 (synthetic),client0160@example.invalid,1952-03-06,GH15 8FB
+P000264,C0126,Motor,2026-01-31,2027-01-30,379.07,1677000.0,Scotland,Client 0126 (synthetic),client0126@example.invalid,1953-09-19,EF15 7DD
+P000265,C0269,Home,2025-10-08,2026-10-07,1079.73,519000.0,Scotland,Client 0269 (synthetic),client0269@example.invalid,1966-01-03,CD19 3BB
+P000266,C0087,Motor,2026-03-04,2027-03-03,1118.03,1067000.0,North West,Client 0087 (synthetic),client0087@example.invalid,1959-01-22,EF5 4EB
+P000267,C0121,Motor,2026-03-23,2027-03-22,363.28,1037000.0,South East,Client 0121 (synthetic),client0121@example.invalid,1970-11-09,GH18 8DF
+P000268,C0140,Motor,2026-07-26,2027-07-25,874.93,838000.0,North West,Client 0140 (synthetic),client0140@example.invalid,1994-07-11,EF16 6EA
+P000269,C0101,Home,2025-10-02,2026-10-01,1329.6,1643000.0,London,Client 0101 (synthetic),client0101@example.invalid,1993-11-23,AB15 7AA
+P000270,C0140,Commercial Property,2026-08-14,2027-08-13,1132.31,210000.0,North West,Client 0140 (synthetic),client0140@example.invalid,1994-07-11,EF16 6EA
+P000271,C0026,Motor,2026-08-24,2027-08-23,565.39,1496000.0,Wales,Client 0026 (synthetic),client0026@example.invalid,1978-07-21,CD11 3DB
+P000272,C0085,Liability,2025-12-13,2026-12-12,385.08,570000.0,Midlands,Client 0085 (synthetic),client0085@example.invalid,1992-06-30,CD14 5GG
+P000273,C0058,Motor,2026-04-23,2027-04-22,282.59,1854000.0,Scotland,Client 0058 (synthetic),client0058@example.invalid,1996-01-27,AB17 1ED
+P000274,C0005,Home,2026-08-23,2027-08-22,1105.91,1616000.0,London,Client 0005 (synthetic),client0005@example.invalid,1964-04-26,AB7 1BG
+P000275,C0158,Home,2025-12-19,2026-12-18,1005.73,397000.0,South East,Client 0158 (synthetic),client0158@example.invalid,1953-09-07,GH4 4BD
+P000276,C0238,Liability,2026-02-10,2027-02-09,1021.51,1001000.0,Wales,Client 0238 (synthetic),client0238@example.invalid,1995-12-08,EF11 2GB
+P000277,C0122,Liability,2025-12-24,2026-12-23,932.41,1023000.0,London,Client 0122 (synthetic),client0122@example.invalid,1990-01-18,EF10 3GB
+P000278,C0293,Motor,2025-11-19,2026-11-18,281.35,1704000.0,South East,Client 0293 (synthetic),client0293@example.invalid,1971-08-09,AB12 8FD
+P000279,C0177,Motor,2026-03-31,2027-03-30,435.71,1994000.0,Midlands,Client 0177 (synthetic),client0177@example.invalid,1992-02-09,AB11 4DE
+P000280,C0250,Motor,2026-02-05,2027-02-04,853.49,1837000.0,Midlands,Client 0250 (synthetic),client0250@example.invalid,1954-05-06,EF17 5AF
+P000281,C0261,Home,2026-04-11,2027-04-10,290.23,1852000.0,North West,Client 0261 (synthetic),client0261@example.invalid,1955-08-13,CD1 3EA
+P000282,C0237,Home,2026-02-01,2027-01-31,1235.09,449000.0,Midlands,Client 0237 (synthetic),client0237@example.invalid,1969-12-03,CD12 5AG
+P000283,C0153,Home,2026-09-23,2027-09-22,791.08,1775000.0,London,Client 0153 (synthetic),client0153@example.invalid,1970-07-19,AB12 5EG
+P000284,C0008,Motor,2026-08-31,2027-08-30,528.27,583000.0,South East,Client 0008 (synthetic),client0008@example.invalid,1983-11-23,CD3 2DE
+P000285,C0016,Home,2026-05-24,2027-05-23,1339.12,963000.0,Midlands,Client 0016 (synthetic),client0016@example.invalid,1958-07-08,AB1 7BE
+P000286,C0213,Motor,2026-09-20,2027-09-19,1239.26,1005000.0,Scotland,Client 0213 (synthetic),client0213@example.invalid,1999-06-23,CD19 5AE
+P000287,C0041,Liability,2026-01-05,2027-01-04,756.62,776000.0,London,Client 0041 (synthetic),client0041@example.invalid,1990-12-11,GH3 5ED
+P000288,C0071,Motor,2026-02-08,2027-02-07,1151.9,137000.0,Midlands,Client 0071 (synthetic),client0071@example.invalid,1967-11-02,AB4 3GA
+P000289,C0154,Home,2026-06-18,2027-06-17,1578.74,937000.0,Midlands,Client 0154 (synthetic),client0154@example.invalid,1984-08-29,GH4 1BB
+P000290,C0121,Motor,2026-06-30,2027-06-29,558.7,435000.0,Wales,Client 0121 (synthetic),client0121@example.invalid,1970-11-09,GH18 8DF
+P000291,C0141,Motor,2025-10-11,2026-10-10,1114.64,503000.0,Midlands,Client 0141 (synthetic),client0141@example.invalid,1994-07-10,CD16 2ED
+P000292,C0053,Motor,2026-04-21,2027-04-20,300.16,1723000.0,Wales,Client 0053 (synthetic),client0053@example.invalid,1961-07-04,EF8 2EG
+P000293,C0017,Motor,2026-07-05,2027-07-04,1593.11,396000.0,South East,Client 0017 (synthetic),client0017@example.invalid,1954-04-16,AB1 2FF
+P000294,C0247,Liability,2026-06-13,2027-06-12,343.12,530000.0,Midlands,Client 0247 (synthetic),client0247@example.invalid,1970-09-13,CD14 1EF
+P000295,C0192,Home,2026-07-07,2027-07-06,174.17,831000.0,Wales,Client 0192 (synthetic),client0192@example.invalid,1990-04-21,GH18 3EE
+P000296,C0294,Home,2026-07-27,2027-07-26,480.58,330000.0,South East,Client 0294 (synthetic),client0294@example.invalid,1996-03-27,GH12 1ED
+P000297,C0020,Home,2025-10-31,2026-10-30,586.45,1250000.0,South East,Client 0020 (synthetic),client0020@example.invalid,1989-02-05,EF1 3DE
+P000298,C0183,Home,2026-03-09,2027-03-08,1287.87,1082000.0,London,Client 0183 (synthetic),client0183@example.invalid,1956-12-05,AB14 4BE
+P000299,C0100,Motor,2025-11-17,2026-11-16,588.0,1398000.0,Midlands,Client 0100 (synthetic),client0100@example.invalid,1999-07-08,GH4 8GE
+P000300,C0157,Motor,2026-09-01,2027-08-31,1152.14,1951000.0,Midlands,Client 0157 (synthetic),client0157@example.invalid,1961-02-13,GH9 4BB
+P000301,C0209,Motor,2025-11-12,2026-11-11,280.45,1449000.0,Scotland,Client 0209 (synthetic),client0209@example.invalid,1990-10-10,GH15 8DA
+P000302,C0049,Home,2026-05-21,2027-05-20,548.49,209000.0,Wales,Client 0049 (synthetic),client0049@example.invalid,1966-05-01,AB14 7GD
+P000303,C0216,Liability,2026-08-08,2027-08-07,566.69,1682000.0,North West,Client 0216 (synthetic),client0216@example.invalid,1996-07-21,GH1 1DB
+P000304,C0295,Home,2026-01-14,2027-01-13,241.05,1590000.0,North West,Client 0295 (synthetic),client0295@example.invalid,1975-07-27,GH16 6GG
+P000305,C0044,Motor,2026-01-02,2027-01-01,677.92,1992000.0,South East,Client 0044 (synthetic),client0044@example.invalid,1952-06-19,AB4 6AD
+P000306,C0294,Motor,2026-01-14,2027-01-13,1750.73,640000.0,South East,Client 0294 (synthetic),client0294@example.invalid,1996-03-27,GH12 1ED
+P000307,C0037,Motor,2025-10-30,2026-10-29,943.08,1980000.0,Scotland,Client 0037 (synthetic),client0037@example.invalid,1974-07-17,CD16 4GD
+P000308,C0142,Motor,2026-05-28,2027-05-27,599.89,263000.0,London,Client 0142 (synthetic),client0142@example.invalid,1968-03-10,CD10 4DF
+P000309,C0102,Home,2026-04-21,2027-04-20,560.35,148000.0,Scotland,Client 0102 (synthetic),client0102@example.invalid,1981-03-13,EF1 7AA
+P000310,C0222,Motor,2025-11-26,2026-11-25,563.49,523000.0,Midlands,Client 0222 (synthetic),client0222@example.invalid,1999-04-24,GH13 2AG
+P000311,C0009,Commercial Property,2025-11-01,2026-10-31,799.79,987000.0,Wales,Client 0009 (synthetic),client0009@example.invalid,1989-10-14,GH6 3DE
+P000312,C0220,Motor,2025-10-27,2026-10-26,398.51,1626000.0,Scotland,Client 0220 (synthetic),client0220@example.invalid,1984-09-19,EF17 2BD
+P000313,C0252,Motor,2026-03-20,2027-03-19,653.01,753000.0,Scotland,Client 0252 (synthetic),client0252@example.invalid,1957-04-08,CD1 1ED
+P000314,C0278,Motor,2026-08-02,2027-08-01,914.56,1192000.0,London,Client 0278 (synthetic),client0278@example.invalid,1987-10-22,CD3 8DE
+P000315,C0094,Home,2026-05-02,2027-05-01,1295.37,1536000.0,Midlands,Client 0094 (synthetic),client0094@example.invalid,1967-06-06,EF8 2BG
+P000316,C0155,Home,2026-01-05,2027-01-04,722.02,1212000.0,London,Client 0155 (synthetic),client0155@example.invalid,1982-06-27,GH11 6GE
+P000317,C0116,Motor,2026-07-29,2027-07-28,382.09,1454000.0,Wales,Client 0116 (synthetic),client0116@example.invalid,1967-02-06,AB18 1AF
+P000318,C0268,Home,2026-03-08,2027-03-07,985.83,217000.0,South East,Client 0268 (synthetic),client0268@example.invalid,1976-05-13,CD17 3FG
+P000319,C0297,Home,2026-04-23,2027-04-22,316.37,1553000.0,Scotland,Client 0297 (synthetic),client0297@example.invalid,1998-12-24,EF10 6EF
+P000320,C0090,Home,2025-11-04,2026-11-03,347.07,1683000.0,Midlands,Client 0090 (synthetic),client0090@example.invalid,1957-09-03,GH16 5EF
+P000321,C0164,Home,2025-10-29,2026-10-28,894.81,874000.0,Wales,Client 0164 (synthetic),client0164@example.invalid,1982-11-05,CD12 2AD
+P000322,C0274,Liability,2026-02-05,2027-02-04,1394.58,1149000.0,Wales,Client 0274 (synthetic),client0274@example.invalid,1953-04-25,GH11 6FG
+P000323,C0290,Commercial Property,2026-06-09,2027-06-08,1019.12,1706000.0,Midlands,Client 0290 (synthetic),client0290@example.invalid,1978-02-28,AB4 5AG
+P000324,C0104,Liability,2025-10-09,2026-10-08,640.61,1232000.0,Midlands,Client 0104 (synthetic),client0104@example.invalid,1989-07-22,AB12 2EG
+P000325,C0094,Motor,2026-01-16,2027-01-15,620.07,993000.0,Wales,Client 0094 (synthetic),client0094@example.invalid,1967-06-06,EF8 2BG
+P000326,C0110,Commercial Property,2025-10-31,2026-10-30,734.22,1103000.0,Scotland,Client 0110 (synthetic),client0110@example.invalid,1981-08-03,EF9 3FA
+P000327,C0093,Home,2025-12-15,2026-12-14,344.28,125000.0,Midlands,Client 0093 (synthetic),client0093@example.invalid,1958-08-19,AB5 5AA
+P000328,C0281,Motor,2026-04-20,2027-04-19,556.82,1874000.0,Scotland,Client 0281 (synthetic),client0281@example.invalid,1987-01-21,AB14 8AD
+P000329,C0286,Liability,2025-12-24,2026-12-23,902.37,1498000.0,Midlands,Client 0286 (synthetic),client0286@example.invalid,1978-02-14,CD18 5DA
+P000330,C0261,Commercial Property,2025-10-25,2026-10-24,992.42,1347000.0,Wales,Client 0261 (synthetic),client0261@example.invalid,1955-08-13,CD1 3EA
+P000331,C0069,Motor,2025-12-20,2026-12-19,974.12,1709000.0,South East,Client 0069 (synthetic),client0069@example.invalid,1957-08-17,GH7 4AA
+P000332,C0064,Home,2026-07-03,2027-07-02,863.78,466000.0,North West,Client 0064 (synthetic),client0064@example.invalid,1955-05-15,AB8 5BB
+P000333,C0085,Motor,2025-12-08,2026-12-07,1226.72,369000.0,London,Client 0085 (synthetic),client0085@example.invalid,1992-06-30,CD14 5GG
+P000334,C0026,Home,2026-07-09,2027-07-08,992.03,1957000.0,London,Client 0026 (synthetic),client0026@example.invalid,1978-07-21,CD11 3DB
+P000335,C0132,Home,2026-02-19,2027-02-18,670.11,432000.0,South East,Client 0132 (synthetic),client0132@example.invalid,1968-11-24,AB2 4EA
+P000336,C0211,Motor,2026-07-01,2027-06-30,663.15,1798000.0,London,Client 0211 (synthetic),client0211@example.invalid,1994-10-01,CD4 5AA
+P000337,C0065,Motor,2026-03-09,2027-03-08,1530.37,1594000.0,Midlands,Client 0065 (synthetic),client0065@example.invalid,1992-11-09,AB5 6BD
+P000338,C0131,Motor,2026-08-04,2027-08-03,703.25,1702000.0,South East,Client 0131 (synthetic),client0131@example.invalid,1993-08-23,CD10 3EF
+P000339,C0161,Home,2025-11-09,2026-11-08,1010.23,1154000.0,Wales,Client 0161 (synthetic),client0161@example.invalid,1950-11-04,GH18 1BA
+P000340,C0228,Commercial Property,2026-08-07,2027-08-06,1194.65,1969000.0,Wales,Client 0228 (synthetic),client0228@example.invalid,1976-07-18,CD19 4EB
+P000341,C0227,Motor,2026-01-14,2027-01-13,759.11,24000.0,South East,Client 0227 (synthetic),client0227@example.invalid,1959-11-11,GH12 5EE
+P000342,C0031,Home,2026-04-07,2027-04-06,306.4,346000.0,Wales,Client 0031 (synthetic),client0031@example.invalid,1952-07-09,EF6 4FB
+P000343,C0240,Motor,2025-11-27,2026-11-26,1421.56,410000.0,London,Client 0240 (synthetic),client0240@example.invalid,1984-08-04,EF8 8DE
+P000344,C0240,Motor,2026-04-19,2027-04-18,328.97,1947000.0,London,Client 0240 (synthetic),client0240@example.invalid,1984-08-04,EF8 8DE
+P000345,C0268,Motor,2026-07-01,2027-06-30,359.65,1064000.0,South East,Client 0268 (synthetic),client0268@example.invalid,1976-05-13,CD17 3FG
+P000346,C0018,Motor,2026-04-28,2027-04-27,655.35,420000.0,North West,Client 0018 (synthetic),client0018@example.invalid,1998-11-27,GH10 7GD
+P000347,C0113,Home,2025-12-29,2026-12-28,227.24,1068000.0,South East,Client 0113 (synthetic),client0113@example.invalid,1974-05-19,GH7 4AB
+P000348,C0232,Motor,2025-11-09,2026-11-08,453.48,1300000.0,Wales,Client 0232 (synthetic),client0232@example.invalid,1957-11-11,AB15 7FB
+P000349,C0123,Liability,2025-12-18,2026-12-17,203.48,1235000.0,South East,Client 0123 (synthetic),client0123@example.invalid,1965-03-03,CD6 1ED
+P000350,C0041,Liability,2026-03-14,2027-03-13,816.38,1417000.0,South East,Client 0041 (synthetic),client0041@example.invalid,1990-12-11,GH3 5ED
+P000351,C0064,Motor,2026-04-07,2027-04-06,479.47,1636000.0,Wales,Client 0064 (synthetic),client0064@example.invalid,1955-05-15,AB8 5BB
+P000352,C0075,Commercial Property,2025-12-20,2026-12-19,862.6,62000.0,London,Client 0075 (synthetic),client0075@example.invalid,1952-10-10,CD19 7EG
+P000353,C0250,Motor,2025-11-18,2026-11-17,1372.02,605000.0,Wales,Client 0250 (synthetic),client0250@example.invalid,1954-05-06,EF17 5AF
+P000354,C0086,Home,2025-10-10,2026-10-09,560.44,1446000.0,London,Client 0086 (synthetic),client0086@example.invalid,1957-08-23,AB3 3DD
+P000355,C0134,Home,2026-08-30,2027-08-29,1010.07,566000.0,Scotland,Client 0134 (synthetic),client0134@example.invalid,1967-09-25,GH13 2EE
+P000356,C0120,Home,2026-04-07,2027-04-06,338.22,1730000.0,London,Client 0120 (synthetic),client0120@example.invalid,1959-05-21,EF18 8GE
+P000357,C0204,Home,2026-01-25,2027-01-24,595.47,205000.0,Scotland,Client 0204 (synthetic),client0204@example.invalid,1982-12-18,CD6 4DG
+P000358,C0150,Commercial Property,2026-08-23,2027-08-22,1625.14,429000.0,North West,Client 0150 (synthetic),client0150@example.invalid,1995-03-01,AB8 2BA
+P000359,C0036,Home,2026-04-05,2027-04-04,852.12,782000.0,Scotland,Client 0036 (synthetic),client0036@example.invalid,1994-09-14,EF9 4GD
+P000360,C0009,Home,2026-03-20,2027-03-19,710.21,1722000.0,South East,Client 0009 (synthetic),client0009@example.invalid,1989-10-14,GH6 3DE
+P000361,C0182,Motor,2026-06-15,2027-06-14,918.38,150000.0,Midlands,Client 0182 (synthetic),client0182@example.invalid,1961-10-11,CD6 5BD
+P000362,C0110,Home,2025-11-13,2026-11-12,1321.27,1583000.0,Wales,Client 0110 (synthetic),client0110@example.invalid,1981-08-03,EF9 3FA
+P000363,C0050,Home,2026-07-18,2027-07-17,1198.37,1956000.0,Scotland,Client 0050 (synthetic),client0050@example.invalid,1967-12-12,CD7 4DD
+P000364,C0265,Commercial Property,2026-07-06,2027-07-05,700.51,1918000.0,Scotland,Client 0265 (synthetic),client0265@example.invalid,1974-04-02,GH1 5AA
+P000365,C0141,Home,2026-07-03,2027-07-02,642.67,1131000.0,Scotland,Client 0141 (synthetic),client0141@example.invalid,1994-07-10,CD16 2ED
+P000366,C0200,Motor,2026-07-28,2027-07-27,238.63,212000.0,North West,Client 0200 (synthetic),client0200@example.invalid,1974-01-28,CD2 2ED
+P000367,C0298,Motor,2026-02-17,2027-02-16,856.78,1732000.0,North West,Client 0298 (synthetic),client0298@example.invalid,1990-06-25,AB8 2EG
+P000368,C0074,Commercial Property,2026-06-16,2027-06-15,166.87,1940000.0,Midlands,Client 0074 (synthetic),client0074@example.invalid,1961-09-05,GH5 1BG
+P000369,C0191,Commercial Property,2025-11-28,2026-11-27,845.17,1315000.0,North West,Client 0191 (synthetic),client0191@example.invalid,1971-01-25,EF19 8EA
+P000370,C0002,Motor,2026-05-31,2027-05-30,184.67,40000.0,Midlands,Client 0002 (synthetic),client0002@example.invalid,1996-03-17,GH9 4EA
+P000371,C0190,Liability,2025-11-22,2026-11-21,804.63,1856000.0,South East,Client 0190 (synthetic),client0190@example.invalid,1989-07-28,GH9 1BB
+P000372,C0033,Home,2026-05-02,2027-05-01,180.98,1857000.0,London,Client 0033 (synthetic),client0033@example.invalid,1995-10-06,AB9 2GF
+P000373,C0168,Motor,2026-05-04,2027-05-03,816.55,534000.0,Midlands,Client 0168 (synthetic),client0168@example.invalid,1970-02-23,GH14 6ED
+P000374,C0155,Motor,2026-08-24,2027-08-23,445.27,1490000.0,North West,Client 0155 (synthetic),client0155@example.invalid,1982-06-27,GH11 6GE
+P000375,C0173,Motor,2026-05-27,2027-05-26,348.07,1415000.0,Scotland,Client 0173 (synthetic),client0173@example.invalid,1970-01-31,GH17 6AG
+P000376,C0276,Commercial Property,2026-02-19,2027-02-18,228.12,135000.0,Scotland,Client 0276 (synthetic),client0276@example.invalid,1954-12-15,EF6 2BD
+P000377,C0134,Motor,2026-04-20,2027-04-19,859.86,82000.0,London,Client 0134 (synthetic),client0134@example.invalid,1967-09-25,GH13 2EE
+P000378,C0109,Commercial Property,2026-09-27,2027-09-26,379.32,978000.0,Midlands,Client 0109 (synthetic),client0109@example.invalid,1989-07-05,GH1 8AG
+P000379,C0101,Home,2026-01-29,2027-01-28,568.3,1165000.0,Wales,Client 0101 (synthetic),client0101@example.invalid,1993-11-23,AB15 7AA
+P000380,C0079,Motor,2026-05-10,2027-05-09,531.95,1600000.0,Scotland,Client 0079 (synthetic),client0079@example.invalid,1957-05-26,EF14 7BG
+P000381,C0184,Commercial Property,2026-06-16,2027-06-15,430.88,1506000.0,London,Client 0184 (synthetic),client0184@example.invalid,1991-05-20,AB13 7DF
+P000382,C0045,Commercial Property,2025-10-11,2026-10-10,767.2,619000.0,South East,Client 0045 (synthetic),client0045@example.invalid,1991-11-07,GH10 4FB
+P000383,C0140,Liability,2026-06-26,2027-06-25,290.36,1311000.0,Scotland,Client 0140 (synthetic),client0140@example.invalid,1994-07-11,EF16 6EA
+P000384,C0268,Liability,2025-11-05,2026-11-04,666.71,1372000.0,Midlands,Client 0268 (synthetic),client0268@example.invalid,1976-05-13,CD17 3FG
+P000385,C0261,Motor,2026-07-30,2027-07-29,1693.57,1496000.0,London,Client 0261 (synthetic),client0261@example.invalid,1955-08-13,CD1 3EA
+P000386,C0134,Motor,2026-07-29,2027-07-28,248.86,1474000.0,North West,Client 0134 (synthetic),client0134@example.invalid,1967-09-25,GH13 2EE
+P000387,C0112,Motor,2025-10-19,2026-10-18,904.66,1149000.0,North West,Client 0112 (synthetic),client0112@example.invalid,1961-11-19,GH8 8BE
+P000388,C0070,Commercial Property,2026-04-16,2027-04-15,816.82,1669000.0,Wales,Client 0070 (synthetic),client0070@example.invalid,1953-12-03,CD14 6FB
+P000389,C0181,Motor,2026-08-03,2027-08-02,733.34,1133000.0,London,Client 0181 (synthetic),client0181@example.invalid,1975-12-07,AB15 2EE
+P000390,C0175,Home,2026-09-13,2027-09-12,722.21,900000.0,London,Client 0175 (synthetic),client0175@example.invalid,1993-06-17,CD13 2AA
+P000391,C0083,Home,2025-12-24,2026-12-23,1044.81,385000.0,South East,Client 0083 (synthetic),client0083@example.invalid,1954-01-22,EF12 8AA
+P000392,C0024,Home,2026-08-29,2027-08-28,1295.7,1465000.0,Midlands,Client 0024 (synthetic),client0024@example.invalid,1984-07-31,GH2 6BD
+P000393,C0003,Liability,2026-06-21,2027-06-20,261.74,281000.0,Midlands,Client 0003 (synthetic),client0003@example.invalid,1973-11-14,AB1 7AD
+P000394,C0203,Motor,2026-08-06,2027-08-05,559.66,1254000.0,North West,Client 0203 (synthetic),client0203@example.invalid,1972-08-31,GH11 4GG
+P000395,C0129,Motor,2025-10-05,2026-10-04,1279.26,1139000.0,South East,Client 0129 (synthetic),client0129@example.invalid,1978-01-26,EF15 3AD
+P000396,C0012,Motor,2026-05-13,2027-05-12,583.7,1112000.0,Wales,Client 0012 (synthetic),client0012@example.invalid,1994-11-07,CD5 4BE
+P000397,C0202,Home,2026-04-09,2027-04-08,762.86,478000.0,Midlands,Client 0202 (synthetic),client0202@example.invalid,1972-05-27,AB13 8DE
+P000398,C0019,Commercial Property,2026-07-16,2027-07-15,925.34,68000.0,North West,Client 0019 (synthetic),client0019@example.invalid,1967-06-02,GH13 6GA
+P000399,C0158,Home,2026-06-17,2027-06-16,538.65,1816000.0,London,Client 0158 (synthetic),client0158@example.invalid,1953-09-07,GH4 4BD
+P000400,C0175,Motor,2025-11-21,2026-11-20,365.79,1379000.0,Scotland,Client 0175 (synthetic),client0175@example.invalid,1993-06-17,CD13 2AA

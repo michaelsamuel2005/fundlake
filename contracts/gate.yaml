@@ -1,0 +1,12 @@
+# Quality gate between silver and gold. A breach stops the pipeline before any gold table is rebuilt.
+thresholds:
+  unresolved_trade_security_rate:      {max: 0.005, description: "Trades whose SEDOL cannot be resolved to a security"}
+  unresolved_position_security_rate:   {max: 0.005, description: "Custodian positions whose ISIN cannot be resolved as of the position date"}
+  unresolved_price_security_rate:      {max: 0.005, description: "Vendor prices whose ISIN cannot be resolved as of the price date"}
+  missing_price_rate:                  {max: 0.02,  description: "Held security-days with no vendor price"}
+  duplicate_trade_rate:                {max: 0.10,  description: "Share of raw OMS rows that are replayed copies"}
+  invalid_claim_rate:                  {max: 0.05,  description: "Share of claims failing validation"}
+  null_quantity_rate:                  {max: 0.0,   description: "Trades or positions with unparseable quantity"}
+  min_rows_trades:                     {min: 100,   description: "Deduplicated trades"}
+  min_rows_positions:                  {min: 1000,  description: "Custodian positions"}
+  pm_notice_issue_rate:                {max: 0.05,  description: "GP notices duplicated, mismatched, sign-corrected or misaddressed"}

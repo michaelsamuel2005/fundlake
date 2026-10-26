@@ -1,0 +1,584 @@
+{
+ "build_id": "77a376fd6d15dd56",
+ "gold_sha256": "5aef9f00b0ffafdd9ce7ab20b13e37cd1966f07826ec0f309f6e128391f90da6",
+ "row_counts": {
+  "bronze.bronze_custodian_cash_nav": 260,
+  "bronze.bronze_custodian_positions": 5051,
+  "bronze.bronze_insurer_claims": 280,
+  "bronze.bronze_insurer_policies": 400,
+  "bronze.bronze_oms_counterparties": 6,
+  "bronze.bronze_oms_funds": 4,
+  "bronze.bronze_oms_trades": 769,
+  "bronze.bronze_pm_commitments": 10,
+  "bronze.bronze_pm_funds": 8,
+  "bronze.bronze_pm_nav_statements": 193,
+  "bronze.bronze_pm_notices": 337,
+  "bronze.bronze_pm_notice_lines": 653,
+  "bronze.bronze_pm_secondary_transfers": 1,
+  "bronze.bronze_secmaster_identifiers": 140,
+  "bronze.bronze_secmaster_securities": 63,
+  "bronze.bronze_vendor_fx": 130,
+  "bronze.bronze_vendor_prices": 3892,
+  "silver.dq_findings": 81,
+  "silver.silver_claims": 277,
+  "silver.silver_clients": 225,
+  "silver.silver_counterparties": 6,
+  "silver.silver_custodian_cash_nav": 260,
+  "silver.silver_custodian_positions": 5051,
+  "silver.silver_funds": 4,
+  "silver.silver_fx": 130,
+  "silver.silver_identifiers": 140,
+  "silver.silver_pm_commitments": 10,
+  "silver.silver_pm_funds": 8,
+  "silver.silver_pm_nav_statements": 193,
+  "silver.silver_pm_notices": 334,
+  "silver.silver_pm_notice_lines": 647,
+  "silver.silver_pm_quarter_ends": 36,
+  "silver.silver_pm_transfers": 1,
+  "silver.silver_policies": 400,
+  "silver.silver_prices": 3892,
+  "silver.silver_securities": 63,
+  "silver.silver_trades": 737,
+  "gold.client_policy_view": 400,
+  "gold.dim_counterparty": 6,
+  "gold.dim_date": 96,
+  "gold.dim_fund": 4,
+  "gold.dim_pm_fund": 8,
+  "gold.dim_policy": 400,
+  "gold.dim_security": 63,
+  "gold.fact_claim": 266,
+  "gold.fact_fx": 195,
+  "gold.fact_nav": 256,
+  "gold.fact_nav_component": 5053,
+  "gold.fact_pm_cashflow": 334,
+  "gold.fact_pm_nav": 194,
+  "gold.fact_position": 5053,
+  "gold.fact_price": 3900,
+  "gold.fact_trade": 737,
+  "gold.lineage_position": 5053,
+  "gold.mart_claims_summary": 152,
+  "gold.mart_fund_performance": 256,
+  "gold.mart_loss_ratio": 24,
+  "gold.mart_pm_by_strategy": 6,
+  "gold.mart_pm_performance": 10,
+  "gold.pm_irr": 10,
+  "gold.pm_nav_asof": 10,
+  "gold.pm_recon_capital_account": 193,
+  "gold.recon_position_breaks": 71,
+  "gold.si_asset_listing": 20
+ },
+ "gate": [
+  {
+   "check": "unresolved_trade_security_rate",
+   "value": 0.0,
+   "limit": 0.005,
+   "kind": "max",
+   "passed": true,
+   "description": "Trades whose SEDOL cannot be resolved to a security"
+  },
+  {
+   "check": "unresolved_position_security_rate",
+   "value": 0.0,
+   "limit": 0.005,
+   "kind": "max",
+   "passed": true,
+   "description": "Custodian positions whose ISIN cannot be resolved as of the position date"
+  },
+  {
+   "check": "unresolved_price_security_rate",
+   "value": 0.0,
+   "limit": 0.005,
+   "kind": "max",
+   "passed": true,
+   "description": "Vendor prices whose ISIN cannot be resolved as of the price date"
+  },
+  {
+   "check": "missing_price_rate",
+   "value": 0.0026981450252951096,
+   "limit": 0.02,
+   "kind": "max",
+   "passed": true,
+   "description": "Held security-days with no vendor price"
+  },
+  {
+   "check": "duplicate_trade_rate",
+   "value": 0.041612483745123496,
+   "limit": 0.1,
+   "kind": "max",
+   "passed": true,
+   "description": "Share of raw OMS rows that are replayed copies"
+  },
+  {
+   "check": "invalid_claim_rate",
+   "value": 0.039711191335740074,
+   "limit": 0.05,
+   "kind": "max",
+   "passed": true,
+   "description": "Share of claims failing validation"
+  },
+  {
+   "check": "null_quantity_rate",
+   "value": 0.0,
+   "limit": 0.0,
+   "kind": "max",
+   "passed": true,
+   "description": "Trades or positions with unparseable quantity"
+  },
+  {
+   "check": "min_rows_trades",
+   "value": 737.0,
+   "limit": 100,
+   "kind": "min",
+   "passed": true,
+   "description": "Deduplicated trades"
+  },
+  {
+   "check": "min_rows_positions",
+   "value": 5051.0,
+   "limit": 1000,
+   "kind": "min",
+   "passed": true,
+   "description": "Custodian positions"
+  },
+  {
+   "check": "pm_notice_issue_rate",
+   "value": 0.023952095808383235,
+   "limit": 0.05,
+   "kind": "max",
+   "passed": true,
+   "description": "GP notices duplicated, mismatched, sign-corrected or misaddressed"
+  }
+ ],
+ "dbt": {
+  "silver": {
+   "success": 37,
+   "pass": 28,
+   "warn": 1
+  },
+  "gold": {
+   "success": 27,
+   "pass": 37,
+   "warn": 6
+  }
+ },
+ "detection": {
+  "duplicate_trade": {
+   "planted": 32,
+   "detected": 32,
+   "true_positive": 32,
+   "recall": 1.0,
+   "precision": 1.0
+  },
+  "missing_price": {
+   "planted": 8,
+   "detected": 8,
+   "true_positive": 8,
+   "recall": 1.0,
+   "precision": 1.0
+  },
+  "stale_price": {
+   "planted": 6,
+   "detected": 6,
+   "true_positive": 6,
+   "recall": 1.0,
+   "precision": 1.0
+  },
+  "stale_fx": {
+   "planted": 6,
+   "detected": 6,
+   "true_positive": 6,
+   "recall": 1.0,
+   "precision": 1.0
+  },
+  "identifier_change": {
+   "planted": 1,
+   "detected": 1,
+   "true_positive": 1,
+   "recall": 1.0,
+   "precision": 1.0
+  },
+  "identifier_conflict": {
+   "planted": 1,
+   "detected": 1,
+   "true_positive": 1,
+   "recall": 1.0,
+   "precision": 1.0
+  },
+  "position_break": {
+   "planted": 71,
+   "detected": 71,
+   "true_positive": 71,
+   "recall": 1.0,
+   "precision": 1.0
+  },
+  "claim_before_inception": {
+   "planted": 5,
+   "detected": 5,
+   "true_positive": 5,
+   "recall": 1.0,
+   "precision": 1.0
+  },
+  "orphan_claim": {
+   "planted": 4,
+   "detected": 4,
+   "true_positive": 4,
+   "recall": 1.0,
+   "precision": 1.0
+  },
+  "reported_before_loss": {
+   "planted": 2,
+   "detected": 2,
+   "true_positive": 2,
+   "recall": 1.0,
+   "precision": 1.0
+  },
+  "duplicate_claim": {
+   "planted": 3,
+   "detected": 3,
+   "true_positive": 3,
+   "recall": 1.0,
+   "precision": 1.0
+  },
+  "pm_duplicate_notice": {
+   "planted": 3,
+   "detected": 3,
+   "true_positive": 3,
+   "recall": 1.0,
+   "precision": 1.0
+  },
+  "pm_notice_lines_mismatch": {
+   "planted": 2,
+   "detected": 2,
+   "true_positive": 2,
+   "recall": 1.0,
+   "precision": 1.0
+  },
+  "pm_sign_corrected": {
+   "planted": 2,
+   "detected": 2,
+   "true_positive": 2,
+   "recall": 1.0,
+   "precision": 1.0
+  },
+  "pm_unknown_investor": {
+   "planted": 1,
+   "detected": 1,
+   "true_positive": 1,
+   "recall": 1.0,
+   "precision": 1.0
+  },
+  "pm_over_call": {
+   "planted": 1,
+   "detected": 1,
+   "true_positive": 1,
+   "recall": 1.0,
+   "precision": 1.0
+  },
+  "pm_missing_nav_statement": {
+   "planted": 1,
+   "detected": 1,
+   "true_positive": 1,
+   "recall": 1.0,
+   "precision": 1.0
+  },
+  "pm_stale_nav": {
+   "planted": 3,
+   "detected": 3,
+   "true_positive": 3,
+   "recall": 1.0,
+   "precision": 1.0
+  },
+  "pm_capital_account_break": {
+   "planted": 4,
+   "detected": 4,
+   "true_positive": 4,
+   "recall": 1.0,
+   "precision": 1.0
+  },
+  "_overall": {
+   "planted": 156,
+   "true_positive": 156,
+   "false_positive": 0
+  }
+ },
+ "nav": {
+  "fund_days": 256,
+  "breaches": 35,
+  "max_abs_bps": 51.2,
+  "max_abs_gbp": 108608.0
+ },
+ "private_markets": {
+  "funds": 8,
+  "commitments": 10,
+  "strategies": [
+   "buyout",
+   "growth",
+   "infrastructure",
+   "real_estate",
+   "secondaries"
+  ],
+  "currencies": [
+   "EUR",
+   "GBP",
+   "USD"
+  ],
+  "nav_gbp": 88104853.95,
+  "unfunded_gbp": 27761917.82,
+  "tvpi_range": [
+   1.05,
+   1.55
+  ],
+  "irr_range_primary": [
+   0.0241,
+   0.1235
+  ],
+  "secondary": {
+   "pm_fund_id": "PM01",
+   "tvpi_on_purchase_price": 1.55,
+   "gp_basis_tvpi": 1.34,
+   "irr": 0.5894
+  },
+  "unreconciled": [
+   {
+    "investor_id": "F04",
+    "pm_fund_id": "PM05"
+   }
+  ],
+  "capital_account_breaks": {
+   "rows": 4,
+   "amount": 808263.77,
+   "from_period": "2025-09-30"
+  },
+  "statement_lag_days": 92,
+  "lag_cost": {
+   "mean_abs_pct": 3.44,
+   "max_abs_pct": 6.36
+  },
+  "metrics_match_answer_key": true
+ },
+ "agent_eval_scripted": {
+  "model": "scripted",
+  "n_questions": 30,
+  "answerable": 24,
+  "accuracy_answerable": 1.0,
+  "abstain_questions": 6,
+  "abstain_recall": 1.0,
+  "abstain_precision": 1.0,
+  "faithful_answers": 1.0,
+  "hallucinated_numbers": 0,
+  "mean_tool_calls": 0.9333333333333333
+ },
+ "airflow_dag_test": {
+  "command": "airflow dags test fundlake_daily 2026-10-26",
+  "exit_code": 0,
+  "dag_run_id": "manual__2026-10-26T19:46:49.090064+00:00",
+  "dag_run_state": "success",
+  "started": "2026-10-26 00:00:00.000000",
+  "ended": "2026-10-26 19:47:29.239909",
+  "tasks": [
+   {
+    "task_id": "validate_contracts",
+    "state": "success",
+    "started": "2026-10-26 19:46:49.430267",
+    "ended": "2026-10-26 19:46:52.643034"
+   },
+   {
+    "task_id": "dbt_silver",
+    "state": "success",
+    "started": "2026-10-26 19:46:52.775643",
+    "ended": "2026-10-26 19:47:06.823783"
+   },
+   {
+    "task_id": "quality_gate",
+    "state": "success",
+    "started": "2026-10-26 19:47:06.924355",
+    "ended": "2026-10-26 19:47:09.361418"
+   },
+   {
+    "task_id": "dbt_gold",
+    "state": "success",
+    "started": "2026-10-26 19:47:09.465782",
+    "ended": "2026-10-26 19:47:22.591279"
+   },
+   {
+    "task_id": "record_audit",
+    "state": "success",
+    "started": "2026-10-26 19:47:22.678955",
+    "ended": "2026-10-26 19:47:29.214286"
+   }
+  ],
+  "audit_record": {
+   "build_id": "0c42f25765955c0d",
+   "gold_sha256": "06881d547ab8ef782373586dfecd999a7a1f437aa1060b65f2ff1a520eadc1c7",
+   "orchestrator": "airflow",
+   "dbt_tests": {
+    "dbt_silver": {
+     "success": 37,
+     "pass": 28,
+     "warn": 1
+    },
+    "dbt_gold": {
+     "success": 27,
+     "pass": 37,
+     "warn": 6
+    }
+   }
+  }
+ },
+ "airflow_dag_test_gate_fail": {
+  "command": "airflow dags test fundlake_daily 2026-10-26",
+  "exit_code": 1,
+  "dag_run_id": "manual__2026-10-26T19:47:40.188610+00:00",
+  "dag_run_state": "failed",
+  "started": "2026-10-26 00:00:00.000000",
+  "ended": "2026-10-26 19:47:58.042624",
+  "tasks": [
+   {
+    "task_id": "validate_contracts",
+    "state": "success",
+    "started": "2026-10-26 19:47:40.555732",
+    "ended": "2026-10-26 19:47:43.340032"
+   },
+   {
+    "task_id": "dbt_silver",
+    "state": "success",
+    "started": "2026-10-26 19:47:43.461091",
+    "ended": "2026-10-26 19:47:55.786334"
+   },
+   {
+    "task_id": "quality_gate",
+    "state": "failed",
+    "started": "2026-10-26 19:47:55.889226",
+    "ended": "2026-10-26 19:47:57.999880"
+   },
+   {
+    "task_id": "dbt_gold",
+    "state": "upstream_failed",
+    "started": "2026-10-26 19:47:58.032868",
+    "ended": "2026-10-26 19:47:58.032868"
+   },
+   {
+    "task_id": "record_audit",
+    "state": "upstream_failed",
+    "started": "2026-10-26 19:47:58.034902",
+    "ended": "2026-10-26 19:47:58.034902"
+   }
+  ],
+  "audit_record": null
+ },
+ "spark_local_parity": {
+  "engine": "spark",
+  "spark_version": "3.5.6",
+  "databricks_runtime": null,
+  "target": "/tmp/spark_out",
+  "tables_compared": 17,
+  "tables_identical": 17,
+  "all_identical": true,
+  "tables": {
+   "oms_trades": {
+    "spark_rows": 769,
+    "duckdb_rows": 769,
+    "row_numbers_ok": true,
+    "identical": true
+   },
+   "oms_funds": {
+    "spark_rows": 4,
+    "duckdb_rows": 4,
+    "row_numbers_ok": true,
+    "identical": true
+   },
+   "oms_counterparties": {
+    "spark_rows": 6,
+    "duckdb_rows": 6,
+    "row_numbers_ok": true,
+    "identical": true
+   },
+   "custodian_positions": {
+    "spark_rows": 5051,
+    "duckdb_rows": 5051,
+    "row_numbers_ok": true,
+    "identical": true
+   },
+   "custodian_cash_nav": {
+    "spark_rows": 260,
+    "duckdb_rows": 260,
+    "row_numbers_ok": true,
+    "identical": true
+   },
+   "vendor_prices": {
+    "spark_rows": 3892,
+    "duckdb_rows": 3892,
+    "row_numbers_ok": true,
+    "identical": true
+   },
+   "vendor_fx": {
+    "spark_rows": 130,
+    "duckdb_rows": 130,
+    "row_numbers_ok": true,
+    "identical": true
+   },
+   "secmaster_securities": {
+    "spark_rows": 63,
+    "duckdb_rows": 63,
+    "row_numbers_ok": true,
+    "identical": true
+   },
+   "secmaster_identifiers": {
+    "spark_rows": 140,
+    "duckdb_rows": 140,
+    "row_numbers_ok": true,
+    "identical": true
+   },
+   "insurer_policies": {
+    "spark_rows": 400,
+    "duckdb_rows": 400,
+    "row_numbers_ok": true,
+    "identical": true
+   },
+   "insurer_claims": {
+    "spark_rows": 280,
+    "duckdb_rows": 280,
+    "row_numbers_ok": true,
+    "identical": true
+   },
+   "pm_funds": {
+    "spark_rows": 8,
+    "duckdb_rows": 8,
+    "row_numbers_ok": true,
+    "identical": true
+   },
+   "pm_commitments": {
+    "spark_rows": 10,
+    "duckdb_rows": 10,
+    "row_numbers_ok": true,
+    "identical": true
+   },
+   "pm_secondary_transfers": {
+    "spark_rows": 1,
+    "duckdb_rows": 1,
+    "row_numbers_ok": true,
+    "identical": true
+   },
+   "pm_notices": {
+    "spark_rows": 337,
+    "duckdb_rows": 337,
+    "row_numbers_ok": true,
+    "identical": true
+   },
+   "pm_notice_lines": {
+    "spark_rows": 653,
+    "duckdb_rows": 653,
+    "row_numbers_ok": true,
+    "identical": true
+   },
+   "pm_nav_statements": {
+    "spark_rows": 193,
+    "duckdb_rows": 193,
+    "row_numbers_ok": true,
+    "identical": true
+   }
+  }
+ },
+ "databricks_run": null,
+ "snowflake_run": null
+}

@@ -1,0 +1,12 @@
+source: pm_funds
+owner: Private markets operations (fund reference data)
+description: Private funds the multi-asset fund and the insurance general account invest in as limited partners.
+schema_version: 1
+grain: pm_fund_id
+volume: {min_rows: 1}
+fields:
+  pm_fund_id: {type: string, nullable: false, pattern: '^PM\d{2}$'}
+  fund_name:  {type: string, nullable: false}
+  strategy:   {type: string, nullable: false, enum: [buyout, growth, real_estate, infrastructure, secondaries]}
+  vintage:    {type: integer, nullable: false, min: 2000}
+  currency:   {type: string, nullable: false, enum: [GBP, EUR, USD]}

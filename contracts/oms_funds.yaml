@@ -1,0 +1,11 @@
+source: oms_funds
+owner: Fund operations
+description: Fund reference data.
+schema_version: 1
+grain: fund_id
+volume: {min_rows: 1}
+fields:
+  fund_id:               {type: string, nullable: false}
+  fund_name:             {type: string, nullable: false}
+  base_currency:         {type: string, nullable: false, enum: [GBP]}
+  is_insurance_account:  {type: string, nullable: false, enum: ["True", "False"]}

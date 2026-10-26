@@ -1,0 +1,113 @@
+{
+ "engine": "spark",
+ "spark_version": "3.5.6",
+ "databricks_runtime": null,
+ "target": "/tmp/spark_out",
+ "tables_compared": 17,
+ "tables_identical": 17,
+ "all_identical": true,
+ "tables": {
+  "oms_trades": {
+   "spark_rows": 769,
+   "duckdb_rows": 769,
+   "row_numbers_ok": true,
+   "identical": true
+  },
+  "oms_funds": {
+   "spark_rows": 4,
+   "duckdb_rows": 4,
+   "row_numbers_ok": true,
+   "identical": true
+  },
+  "oms_counterparties": {
+   "spark_rows": 6,
+   "duckdb_rows": 6,
+   "row_numbers_ok": true,
+   "identical": true
+  },
+  "custodian_positions": {
+   "spark_rows": 5051,
+   "duckdb_rows": 5051,
+   "row_numbers_ok": true,
+   "identical": true
+  },
+  "custodian_cash_nav": {
+   "spark_rows": 260,
+   "duckdb_rows": 260,
+   "row_numbers_ok": true,
+   "identical": true
+  },
+  "vendor_prices": {
+   "spark_rows": 3892,
+   "duckdb_rows": 3892,
+   "row_numbers_ok": true,
+   "identical": true
+  },
+  "vendor_fx": {
+   "spark_rows": 130,
+   "duckdb_rows": 130,
+   "row_numbers_ok": true,
+   "identical": true
+  },
+  "secmaster_securities": {
+   "spark_rows": 63,
+   "duckdb_rows": 63,
+   "row_numbers_ok": true,
+   "identical": true
+  },
+  "secmaster_identifiers": {
+   "spark_rows": 140,
+   "duckdb_rows": 140,
+   "row_numbers_ok": true,
+   "identical": true
+  },
+  "insurer_policies": {
+   "spark_rows": 400,
+   "duckdb_rows": 400,
+   "row_numbers_ok": true,
+   "identical": true
+  },
+  "insurer_claims": {
+   "spark_rows": 280,
+   "duckdb_rows": 280,
+   "row_numbers_ok": true,
+   "identical": true
+  },
+  "pm_funds": {
+   "spark_rows": 8,
+   "duckdb_rows": 8,
+   "row_numbers_ok": true,
+   "identical": true
+  },
+  "pm_commitments": {
+   "spark_rows": 10,
+   "duckdb_rows": 10,
+   "row_numbers_ok": true,
+   "identical": true
+  },
+  "pm_secondary_transfers": {
+   "spark_rows": 1,
+   "duckdb_rows": 1,
+   "row_numbers_ok": true,
+   "identical": true
+  },
+  "pm_notices": {
+   "spark_rows": 337,
+   "duckdb_rows": 337,
+   "row_numbers_ok": true,
+   "identical": true
+  },
+  "pm_notice_lines": {
+   "spark_rows": 653,
+   "duckdb_rows": 653,
+   "row_numbers_ok": true,
+   "identical": true
+  },
+  "pm_nav_statements": {
+   "spark_rows": 193,
+   "duckdb_rows": 193,
+   "row_numbers_ok": true,
+   "identical": true
+  }
+ }
+}

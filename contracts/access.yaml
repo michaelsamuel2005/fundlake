@@ -1,0 +1,6 @@
+# Role -> regions visible in client_policy_view (row-level security). '*' = all regions.
+roles:
+  analyst_london:     [London, South East]
+  analyst_north:      [North West, Scotland]
+  analyst_wales_mids: [Wales, Midlands]
+  data_steward:       ["*"]

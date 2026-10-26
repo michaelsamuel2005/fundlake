@@ -1,0 +1,12 @@
+source: custodian_cash_nav
+owner: Fund administrator
+description: Daily cash balance and administrator-published NAV by fund, in GBP.
+schema_version: 1
+grain: position_date x fund_id
+freshness: {expected_by: "T+1 09:00 UK", max_age_hours: 30}
+volume: {min_rows: 100}
+fields:
+  position_date:  {type: date, nullable: false}
+  fund_id:        {type: string, nullable: false, enum: [F01, F02, F03, F04]}
+  cash_gbp:       {type: decimal, nullable: false}
+  admin_nav_gbp:  {type: decimal, nullable: false}

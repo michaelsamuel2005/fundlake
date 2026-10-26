@@ -1,0 +1,57 @@
+{
+ "command": "airflow dags test fundlake_daily 2026-10-26",
+ "exit_code": 0,
+ "dag_run_id": "manual__2026-10-26T20:02:11.703143+00:00",
+ "dag_run_state": "success",
+ "started": "2026-10-26 00:00:00.000000",
+ "ended": "2026-10-26 20:02:49.119452",
+ "tasks": [
+  {
+   "task_id": "validate_contracts",
+   "state": "success",
+   "started": "2026-10-26 20:02:12.059929",
+   "ended": "2026-10-26 20:02:15.034219"
+  },
+  {
+   "task_id": "dbt_silver",
+   "state": "success",
+   "started": "2026-10-26 20:02:15.161340",
+   "ended": "2026-10-26 20:02:27.962408"
+  },
+  {
+   "task_id": "quality_gate",
+   "state": "success",
+   "started": "2026-10-26 20:02:28.065619",
+   "ended": "2026-10-26 20:02:30.280129"
+  },
+  {
+   "task_id": "dbt_gold",
+   "state": "success",
+   "started": "2026-10-26 20:02:30.375043",
+   "ended": "2026-10-26 20:02:42.642604"
+  },
+  {
+   "task_id": "record_audit",
+   "state": "success",
+   "started": "2026-10-26 20:02:42.735955",
+   "ended": "2026-10-26 20:02:49.087568"
+  }
+ ],
+ "audit_record": {
+  "build_id": "77a376fd6d15dd56",
+  "gold_sha256": "5aef9f00b0ffafdd9ce7ab20b13e37cd1966f07826ec0f309f6e128391f90da6",
+  "orchestrator": "airflow",
+  "dbt_tests": {
+   "dbt_silver": {
+    "success": 37,
+    "pass": 28,
+    "warn": 1
+   },
+   "dbt_gold": {
+    "success": 27,
+    "pass": 37,
+    "warn": 6
+   }
+  }
+ }
+}

@@ -1,0 +1,19 @@
+source: secmaster_securities
+owner: Data management (security master)
+description: Security reference data with attribute history. valid_to is inclusive; null means current.
+schema_version: 1
+grain: security_id x valid_from
+freshness: {expected_by: "T+0 18:00 UK", max_age_hours: 48}
+volume: {min_rows: 30}
+fields:
+  security_id: {type: string, nullable: false, pattern: '^S\d{3}$'}
+  name:        {type: string, nullable: false}
+  asset_class: {type: string, nullable: false, enum: [equity, bond]}
+  currency:    {type: string, nullable: false, enum: [GBP, EUR, USD]}
+  country:     {type: string, nullable: false}
+  sector:      {type: string, nullable: false}
+  rating:      {type: string, nullable: true, enum: [AAA, AA, A, BBB, BB, B]}
+  price_basis: {type: string, nullable: false, enum: [unit, per100]}
+  settle_lag:  {type: integer, nullable: false, min: 0}
+  valid_from:  {type: date, nullable: false}
+  valid_to:    {type: date, nullable: true}

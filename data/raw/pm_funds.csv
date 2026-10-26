@@ -1,0 +1,9 @@
+pm_fund_id,fund_name,strategy,vintage,currency
+PM01,Corvane Capital Partners IV (synthetic),buyout,2018,USD
+PM02,Quillon Growth Equity II (synthetic),growth,2019,EUR
+PM03,Penhallow European Buyout V (synthetic),buyout,2020,EUR
+PM04,Ashgrove UK Property Income (synthetic),real_estate,2019,GBP
+PM05,Redmere Infrastructure III (synthetic),infrastructure,2021,GBP
+PM06,Sablecross Secondaries VII (synthetic),secondaries,2022,USD
+PM07,Lindholm Real Estate Value-Add II (synthetic),real_estate,2022,EUR
+PM08,Thornby Buyout VI (synthetic),buyout,2023,GBP

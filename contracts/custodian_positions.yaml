@@ -1,0 +1,12 @@
+source: custodian_positions
+owner: Custodian operations
+description: End-of-day settled positions by fund and ISIN. A security that changes ISIN is reported under the new ISIN from the effective date.
+schema_version: 1
+grain: position_date x fund_id x isin
+freshness: {expected_by: "T+1 08:00 UK", max_age_hours: 30}
+volume: {min_rows: 1000}
+fields:
+  position_date: {type: date, nullable: false}
+  fund_id:       {type: string, nullable: false, enum: [F01, F02, F03, F04]}
+  isin:          {type: string, nullable: false, check: isin}
+  quantity:      {type: decimal, nullable: false}

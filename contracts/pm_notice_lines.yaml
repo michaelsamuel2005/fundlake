@@ -1,0 +1,11 @@
+source: pm_notice_lines
+owner: General partners via the private-markets portal
+description: Line items of each notice (investment, fees, expenses; income, return of capital, realised gain).
+schema_version: 1
+grain: notice_id x line_no
+volume: {min_rows: 50}
+fields:
+  notice_id: {type: string, nullable: false}
+  line_no:   {type: integer, nullable: false, min: 1}
+  component: {type: string, nullable: false, enum: [investment, management_fee, fund_expenses, income, return_of_capital, realised_gain]}
+  amount:    {type: decimal, nullable: false, min: 0}

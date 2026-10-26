@@ -1,0 +1,19 @@
+source: pm_secondary_transfers
+owner: Private markets operations (transaction team)
+description: LP interests bought on the secondary market; price agreed on a reference NAV, adjusted for cashflows to closing.
+schema_version: 1
+grain: transfer_id
+volume: {min_rows: 0}
+fields:
+  transfer_id:             {type: string, nullable: false}
+  pm_fund_id:              {type: string, nullable: false, pattern: '^PM\d{2}$'}
+  buyer_investor_id:       {type: string, nullable: false, enum: [F03, F04]}
+  seller_name:             {type: string, nullable: false}
+  reference_date:          {type: date, nullable: false}
+  transfer_date:           {type: date, nullable: false}
+  reference_nav:           {type: decimal, nullable: false, min: 0}
+  purchase_price:          {type: decimal, nullable: false, min: 0}
+  transferred_commitment:  {type: decimal, nullable: false, min: 0}
+  inherited_paid_in:       {type: decimal, nullable: false, min: 0}
+  inherited_distributions: {type: decimal, nullable: false, min: 0}
+  unfunded_at_transfer:    {type: decimal, nullable: false}

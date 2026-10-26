@@ -1,0 +1,23 @@
+version: 2
+sources:
+  - name: raw
+    description: "Landed source extracts. On Snowflake these are tables loaded by snowflake/load_raw.sql; on DuckDB the CSVs are read directly."
+    schema: raw
+    tables:
+      - name: oms_trades
+      - name: oms_funds
+      - name: oms_counterparties
+      - name: custodian_positions
+      - name: custodian_cash_nav
+      - name: vendor_prices
+      - name: vendor_fx
+      - name: secmaster_securities
+      - name: secmaster_identifiers
+      - name: insurer_policies
+      - name: insurer_claims
+      - name: pm_funds
+      - name: pm_commitments
+      - name: pm_secondary_transfers
+      - name: pm_notices
+      - name: pm_notice_lines
+      - name: pm_nav_statements

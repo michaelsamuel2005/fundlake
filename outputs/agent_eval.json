@@ -1,0 +1,314 @@
+{
+ "model": "scripted",
+ "n_questions": 30,
+ "answerable": 24,
+ "accuracy_answerable": 1.0,
+ "abstain_questions": 6,
+ "abstain_recall": 1.0,
+ "abstain_precision": 1.0,
+ "faithful_answers": 1.0,
+ "hallucinated_numbers": 0,
+ "mean_tool_calls": 0.9333333333333333,
+ "rows": [
+  {
+   "qid": "break0",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "missed_settlement -> trade_not_reflected_at_custodian",
+   "abstained": false
+  },
+  {
+   "qid": "break1",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "missed_settlement -> trade_not_reflected_at_custodian",
+   "abstained": false
+  },
+  {
+   "qid": "break2",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "missed_settlement -> trade_not_reflected_at_custodian",
+   "abstained": false
+  },
+  {
+   "qid": "break3",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "custodian_extra -> unexplained_difference",
+   "abstained": false
+  },
+  {
+   "qid": "break4",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "missing_position -> missing_at_custodian",
+   "abstained": false
+  },
+  {
+   "qid": "missing0",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "missing price -> carried",
+   "abstained": false
+  },
+  {
+   "qid": "missing1",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "missing price -> carried",
+   "abstained": false
+  },
+  {
+   "qid": "missing2",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "missing price -> carried",
+   "abstained": false
+  },
+  {
+   "qid": "missing3",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "missing price -> carried",
+   "abstained": false
+  },
+  {
+   "qid": "missing4",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "missing price -> carried",
+   "abstained": false
+  },
+  {
+   "qid": "missing5",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "missing price -> carried",
+   "abstained": false
+  },
+  {
+   "qid": "missing6",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "missing price -> carried",
+   "abstained": false
+  },
+  {
+   "qid": "missing7",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "missing price -> carried",
+   "abstained": false
+  },
+  {
+   "qid": "stale0",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "stale",
+   "abstained": false
+  },
+  {
+   "qid": "clean0",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "control: clean",
+   "abstained": false
+  },
+  {
+   "qid": "navfx",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "stale FX day must be flagged",
+   "abstained": false
+  },
+  {
+   "qid": "navclean",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "control: clean day",
+   "abstained": false
+  },
+  {
+   "qid": "navmiss",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "missing price day must be flagged",
+   "abstained": false
+  },
+  {
+   "qid": "lin_trade",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "lineage",
+   "abstained": false
+  },
+  {
+   "qid": "lin_nav",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "lineage",
+   "abstained": false
+  },
+  {
+   "qid": "pm_secondary",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "secondary on purchase price, GP basis shown",
+   "abstained": false
+  },
+  {
+   "qid": "pm_unreconciled",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "capital account does not reconcile",
+   "abstained": false
+  },
+  {
+   "qid": "pm_stale",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "stale marks flagged",
+   "abstained": false
+  },
+  {
+   "qid": "pm_overcall",
+   "kind": "answerable",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "over-call flagged",
+   "abstained": false
+  },
+  {
+   "qid": "abs_pm",
+   "kind": "abstain",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "unknown private fund",
+   "abstained": true
+  },
+  {
+   "qid": "abs_fund",
+   "kind": "abstain",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "unknown fund",
+   "abstained": true
+  },
+  {
+   "qid": "abs_date",
+   "kind": "abstain",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "date outside data",
+   "abstained": true
+  },
+  {
+   "qid": "abs_market",
+   "kind": "abstain",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 0,
+   "why": "no market-news tool",
+   "abstained": true
+  },
+  {
+   "qid": "abs_future",
+   "kind": "abstain",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 0,
+   "why": "forecast",
+   "abstained": true
+  },
+  {
+   "qid": "abs_trade",
+   "kind": "abstain",
+   "correct": true,
+   "faithful": true,
+   "ungrounded": [],
+   "n_calls": 1,
+   "why": "unknown trade",
+   "abstained": true
+  }
+ ]
+}

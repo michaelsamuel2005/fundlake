@@ -1,0 +1,245 @@
+version: 2
+
+models:
+  # ---------------- silver: typed, deduplicated, resolved ----------------
+  - name: silver_trades
+    description: "One row per trade_id. Replayed feed copies dropped; SEDOL resolved to security_id as of trade date."
+    columns:
+      - name: trade_id
+        data_tests: [unique, not_null]
+      - name: fund_id
+        data_tests:
+          - not_null
+          - relationships: {to: ref('silver_funds'), field: fund_id}
+      - name: security_id
+        description: "Unresolved identifiers warn here; the rate-based quality gate (contracts/gate.yaml) decides whether to stop."
+        data_tests:
+          - not_null: {config: {severity: warn}}
+      - name: side
+        data_tests:
+          - accepted_values: {values: ['BUY', 'SELL']}
+      - name: quantity
+        data_tests: [not_null]
+  - name: silver_custodian_positions
+    description: "Custodian positions with ISIN resolved to security_id as of position date."
+    columns:
+      - name: security_id
+        data_tests:
+          - not_null: {config: {severity: warn}}
+      - name: quantity
+        data_tests: [not_null]
+  - name: silver_prices
+    description: "Vendor prices with ISIN resolved as of price date; one row per security-day."
+    columns:
+      - name: security_id
+        data_tests:
+          - not_null: {config: {severity: warn}}
+      - name: close_price
+        data_tests: [not_null]
+  - name: silver_securities
+    description: "Type-2 security master."
+    columns:
+      - name: security_sk
+        data_tests: [unique, not_null]
+  - name: silver_identifiers
+    description: "Identifier cross-reference; is_owner marks the claim that wins when two securities claim one identifier."
+    columns:
+      - name: id_type
+        data_tests:
+          - accepted_values: {values: ['ISIN', 'SEDOL', 'CUSIP']}
+  - name: silver_claims
+    description: "One row per claim_id with validation flags."
+    columns:
+      - name: claim_id
+        data_tests: [unique, not_null]
+  - name: silver_policies
+    description: "Policies without personal data."
+    columns:
+      - name: policy_id
+        data_tests: [unique, not_null]
+  - name: silver_clients
+    description: "Client personal data, isolated from policy data. Not exposed in gold."
+    columns:
+      - name: client_id
+        data_tests: [unique, not_null]
+  - name: dq_findings
+    description: "Source-level data-quality findings, one row per affected entity. Detection only."
+    columns:
+      - name: finding_type
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: ['duplicate_trade', 'identifier_change', 'identifier_conflict', 'missing_price', 'stale_price', 'stale_fx',
+                       'orphan_claim', 'claim_before_inception', 'reported_before_loss', 'duplicate_claim',
+                       'pm_duplicate_notice', 'pm_notice_lines_mismatch', 'pm_sign_corrected', 'pm_unknown_investor',
+                       'pm_over_call', 'pm_missing_nav_statement', 'pm_stale_nav']
+
+  # ---------------- gold: star schema and marts ----------------
+  - name: dim_security
+    description: "Type-2 security dimension. Join facts as of the event date."
+    columns:
+      - name: security_sk
+        data_tests: [unique, not_null]
+  - name: dim_fund
+    columns:
+      - name: fund_id
+        data_tests: [unique, not_null]
+  - name: dim_date
+    columns:
+      - name: date_day
+        data_tests: [unique, not_null]
+  - name: dim_policy
+    description: "Policy dimension with pseudonymous client_key."
+    columns:
+      - name: policy_id
+        data_tests: [unique, not_null]
+  - name: fact_trade
+    description: "Deduplicated trades with notional in GBP and source row lineage."
+    columns:
+      - name: trade_id
+        data_tests: [unique, not_null]
+      - name: security_sk
+        data_tests:
+          - not_null
+          - relationships: {to: ref('dim_security'), field: security_sk}
+      - name: src_row_id
+        data_tests: [not_null]
+  - name: fact_price
+    description: "Security x business day. Missing closes carried forward and flagged."
+    columns:
+      - name: close_price
+        data_tests: [not_null]
+      - name: is_carried
+        description: "True when the vendor sent no price and the last close was carried forward. Expected to warn when the feed has gaps."
+        data_tests:
+          - accepted_values: {values: [false], quote: false, config: {severity: warn}}
+      - name: is_stale
+        data_tests:
+          - accepted_values: {values: [false], quote: false, config: {severity: warn}}
+  - name: fact_fx
+    columns:
+      - name: rate
+        data_tests: [not_null]
+  - name: fact_position
+    description: "OMS settled position vs custodian position per fund x security x business day."
+    columns:
+      - name: is_break
+        data_tests:
+          - accepted_values: {values: [false], quote: false, config: {severity: warn}}
+  - name: fact_nav
+    description: "Fund NAV from our book against the administrator NAV, with breach flag."
+    columns:
+      - name: is_breach
+        data_tests:
+          - accepted_values: {values: [false], quote: false, config: {severity: warn}}
+  - name: recon_position_breaks
+    description: "Custodian-to-OMS break report with a rule-based cause hint."
+  - name: fact_claim
+    description: "Valid claims only; invalid claims stay in silver_claims with a reason."
+    columns:
+      - name: claim_id
+        data_tests: [unique, not_null]
+  - name: client_policy_view
+    description: "GDPR-minimised client view; row-level security by region."
+  - name: si_asset_listing
+    description: "Illustrative Solvency II-style asset listing for the insurance general account. Not a regulatory template."
+
+  # ---------------- private markets ----------------
+  - name: silver_pm_notices
+    description: "One row per GP notice; amount is the sum of its line items, with header disagreements, sign corrections and unknown addressees flagged."
+    columns:
+      - name: notice_id
+        data_tests: [unique, not_null]
+      - name: amount
+        data_tests: [not_null]
+      - name: notice_type
+        data_tests:
+          - accepted_values: {values: ['capital_call', 'distribution']}
+  - name: silver_pm_nav_statements
+    description: "Quarterly capital-account statements with the valuation change and a stale-mark flag."
+    columns:
+      - name: is_stale
+        data_tests:
+          - accepted_values: {values: [false], quote: false, config: {severity: warn}}
+  - name: dim_pm_fund
+    description: "Private funds: strategy, vintage, currency."
+    columns:
+      - name: pm_fund_id
+        data_tests: [unique, not_null]
+  - name: fact_pm_cashflow
+    description: "LP cashflows from the investor's side, including the secondary purchase price."
+    columns:
+      - name: source_id
+        data_tests: [unique, not_null]
+      - name: flow_type
+        data_tests:
+          - accepted_values: {values: ['contribution', 'distribution', 'secondary_purchase']}
+  - name: fact_pm_nav
+    description: "Quarterly NAV per investor and private fund; missing statements rolled forward and flagged."
+    columns:
+      - name: nav
+        data_tests: [not_null]
+      - name: nav_source
+        data_tests:
+          - accepted_values: {values: ['reported', 'rolled_forward']}
+  - name: pm_recon_capital_account
+    description: "GP capital-account statements reconciled to our notices (and inherited figures for secondaries)."
+    columns:
+      - name: is_break
+        data_tests:
+          - accepted_values: {values: [false], quote: false, config: {severity: warn}}
+  - name: pm_nav_asof
+    description: "NAV at the reporting date: latest statement rolled forward with later cashflows."
+  - name: pm_irr
+    description: "Since-inception IRR (XIRR convention) by grid search in SQL."
+    columns:
+      - name: irr
+        data_tests: [not_null]
+  - name: mart_pm_performance
+    description: "Private-markets performance per investor and fund: paid-in, distributions, NAV, unfunded, DPI, RVPI, TVPI, IRR."
+    columns:
+      - name: tvpi
+        data_tests: [not_null]
+      - name: is_reconciled
+        data_tests:
+          - accepted_values: {values: [true], quote: false, config: {severity: warn}}
+
+unit_tests:
+  - name: trades_replayed_batch_is_deduplicated_and_resolved
+    model: silver_trades
+    given:
+      - input: ref('bronze_oms_trades')
+        rows:
+          - {trade_id: T1, fund_id: F01, sedol: AAA, side: buy, quantity: '100', price: '10', currency: GBP, trade_date: '2026-07-01', settle_date: '2026-07-03', counterparty_id: CP1, batch_id: B1,  received_at: '2026-07-01 18:00:00', _source_file: oms_trades.csv, _row_number: 1}
+          - {trade_id: T1, fund_id: F01, sedol: AAA, side: buy, quantity: '100', price: '10', currency: GBP, trade_date: '2026-07-01', settle_date: '2026-07-03', counterparty_id: CP1, batch_id: B1R, received_at: '2026-07-02 08:00:00', _source_file: oms_trades.csv, _row_number: 2}
+          - {trade_id: T2, fund_id: F01, sedol: AAA, side: SELL, quantity: '40', price: '11', currency: GBP, trade_date: '2026-07-02', settle_date: '2026-07-06', counterparty_id: CP1, batch_id: B2,  received_at: '2026-07-02 18:00:00', _source_file: oms_trades.csv, _row_number: 3}
+      - input: ref('silver_identifiers')
+        rows:
+          - {security_id: S1, id_type: SEDOL, id_value: AAA, valid_from: 2026-01-01, valid_to: 9999-12-31, is_owner: true}
+    expect:
+      rows:
+        - {trade_id: T1, security_id: S1, side: BUY, signed_qty: 100, n_source_copies: 2, src_row_id: 'oms_trades.csv:1'}
+        - {trade_id: T2, security_id: S1, side: SELL, signed_qty: -40, n_source_copies: 1, src_row_id: 'oms_trades.csv:3'}
+  - name: identifier_claimed_twice_is_not_resolved_for_the_later_claim
+    model: silver_identifiers
+    given:
+      - input: ref('bronze_secmaster_identifiers')
+        rows:
+          - {security_id: S1, id_type: SEDOL, id_value: X1, valid_from: '2026-01-01', valid_to: , _source_file: f.csv, _row_number: 1}
+          - {security_id: S2, id_type: SEDOL, id_value: X1, valid_from: '2026-07-15', valid_to: , _source_file: f.csv, _row_number: 2}
+    expect:
+      rows:
+        - {security_id: S1, is_owner: true}
+        - {security_id: S2, is_owner: false}
+  - name: irr_of_a_one_year_ten_percent_gain_is_ten_percent
+    model: pm_irr
+    given:
+      - input: ref('fact_pm_cashflow')
+        rows:
+          - {investor_id: F03, pm_fund_id: PM99, value_date: 2025-01-01, signed_amount: -100.0}
+      - input: ref('pm_nav_asof')
+        rows:
+          - {investor_id: F03, pm_fund_id: PM99, as_of_date: 2026-01-01, nav_asof: 110.0}
+    expect:
+      rows:
+        - {investor_id: F03, pm_fund_id: PM99, irr: 0.1, irr_found: true}

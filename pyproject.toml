@@ -1,0 +1,26 @@
+[project]
+name = "fundlake"
+version = "0.1.0"
+description = "Governed data platform for a simulated asset manager with an insurance book (synthetic data)"
+requires-python = ">=3.11"
+dependencies = ["duckdb>=1.1", "pandas", "numpy", "pyyaml", "pydantic>=2", "dbt-core>=1.8", "dbt-duckdb>=1.8"]
+
+[project.optional-dependencies]
+agent = ["pydantic-ai-slim", "mcp"]
+spark = ["pyspark"]
+snowflake = ["dbt-snowflake", "sqlglot"]
+dev = ["pytest", "ruff"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 260
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501", "E701", "E702", "E731", "E741", "I001"]

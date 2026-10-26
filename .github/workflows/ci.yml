@@ -1,0 +1,38 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -e ".[agent,snowflake,dev]"
+      - run: ruff check src tests scripts
+      - run: python -m pytest -q          # DuckDB pipeline, controls, agent (scripted model), Snowflake offline render
+      - run: python scripts/run_all.py
+      - uses: actions/upload-artifact@v4
+        with: {name: results, path: outputs/results.json}
+  spark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - uses: actions/setup-java@v4
+        with: {distribution: temurin, java-version: "17"}
+      - run: pip install -e ".[agent,spark,dev]"
+      - run: python scripts/run_all.py
+      - run: python -m pytest -q tests/test_spark_parity.py
+  airflow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -e ".[dev]" && pip install uv
+      - run: uv venv .venv-airflow --python 3.12 && uv pip install --python .venv-airflow/bin/python "apache-airflow==3.1.8" duckdb pandas pyyaml pydantic && uv pip install --python .venv-airflow/bin/python -e . --no-deps
+      - run: AIRFLOW_BIN=.venv-airflow/bin/airflow bash scripts/run_airflow_dag.sh
+      - run: FAIL_GATE=1 AIRFLOW_BIN=.venv-airflow/bin/airflow bash scripts/run_airflow_dag.sh
+      - run: python -m pytest -q tests/test_dag_graph.py
+

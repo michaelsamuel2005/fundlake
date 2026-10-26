@@ -1,0 +1,13 @@
+source: vendor_prices
+owner: Market data vendor
+description: Daily closing prices keyed by ISIN. Bonds are quoted per 100 par; equities per unit.
+schema_version: 1
+grain: price_date x isin
+freshness: {expected_by: "T+0 20:30 UK", max_age_hours: 26}
+volume: {min_rows: 1000}
+fields:
+  price_date:  {type: date, nullable: false}
+  isin:        {type: string, nullable: false, check: isin}
+  close_price: {type: decimal, nullable: false, min: 0.000001}
+  currency:    {type: string, nullable: false, enum: [GBP, EUR, USD]}
+  vendor_ts:   {type: timestamp, nullable: false}

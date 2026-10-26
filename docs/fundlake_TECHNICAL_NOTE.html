@@ -1,0 +1,38 @@
+<html><head><meta charset=utf-8><style>
+@page { size: A4; margin: 14mm 15mm; }
+body { font-family: Arial, Helvetica, sans-serif; font-size: 9.2pt; line-height: 1.32; color: #1b1f24; }
+h1 { font-size: 15pt; margin: 0 0 2px; color: #14304f; } h2 { font-size: 10.5pt; margin: 9px 0 3px; color: #14304f; border-bottom: 1px solid #c9d3de; padding-bottom: 1px; }
+.sub { color: #51606f; font-size: 8.5pt; margin-bottom: 6px; } .tag { background: #fff4d6; border: 1px solid #e3c870; padding: 3px 6px; font-size: 8pt; margin: 4px 0 6px; }
+table { border-collapse: collapse; width: 100%; font-size: 8.3pt; margin: 3px 0; } th { background: #14304f; color: #fff; text-align: left; padding: 2px 5px; font-weight: 600; }
+td { border-bottom: 1px solid #dde3ea; padding: 2px 5px; vertical-align: top; } p { margin: 2px 0 4px; } .rec { margin: 3px 0 5px; } .rec b { color: #14304f; }
+img { width: 100%; } .bx { flex:1; border:1px solid #9fb2c6; padding:3px 3px; border-radius:3px; } .ar { align-self:center; color:#14304f; font-size:8pt; } .small { font-size: 7.8pt; color: #51606f; } code { font-size: 8pt; background: #f1f4f7; padding: 0 2px; }
+</style></head><body>
+<h1>fundlake: technical note</h1>
+<div class=sub>Governed data platform for a simulated asset manager with an insurance book · v0.1.0 · build 77a376fd6d15dd56</div>
+<div class=tag><b>Synthetic data throughout.</b> Names are invented; identifiers carry valid check digits but are not issued. Faults are planted by <code>fundlake.synth</code> and recorded in <code>answer_key.json</code>.</div>
+<h2>Architecture</h2>
+<div style="display:flex;align-items:stretch;gap:3px;font-size:7.4pt;text-align:center;margin:4px 0">
+<div class=bx style="background:#eef2f6"><b>Sources</b><br>OMS · custodian · vendor · security master · insurer · GPs</div><div class=ar>&#9654;</div>
+<div class=bx style="background:#fff4d6"><b>Contracts</b><br>schema, types, check digits</div><div class=ar>&#9654;</div>
+<div class=bx style="background:#e4ecf5"><b>Bronze</b><br>all-varchar + row lineage</div><div class=ar>&#9654;</div>
+<div class=bx style="background:#d5e3f1"><b>Silver</b><br>typed, deduplicated, resolved, findings</div><div class=ar>&#9654;</div>
+<div class=bx style="background:#f6dcd2;border:1.5px solid #b5542b"><b>Quality gate</b><br>fail = stop, gold unchanged</div><div class=ar>&#9654;</div>
+<div class=bx style="background:#c3d8ec"><b>Gold</b><br>star schema, recon, NAV, marts</div><div class=ar>&#9654;</div>
+<div class=bx style="background:#e1efe3"><b>Agent / MCP</b><br>audit record</div></div>
+<p>Six sources (17 extracts) land as CSV and are checked against YAML data contracts (schema drift, nulls, types, enums, ISIN/SEDOL/CUSIP check digits, volume). dbt builds bronze (all-varchar, with <code>_source_file</code> and <code>_row_number</code>), silver (typed, deduplicated, identifiers resolved as of date, findings) and gold (star schema, reconciliation, NAV control, marts). A rate-based gate sits between silver and gold; a failure stops the run with gold untouched. Each build writes an audit record: input hashes, dbt code hash, versions, row counts, gate results and a hash of the gold layer.</p>
+<h2>Two warehouses, one codebase</h2>
+<p>Warehouse-specific SQL is confined to eight adapter-dispatched macros in <code>dbt/macros/dialect.sql</code>; everything else is ANSI SQL, with joins instead of correlated subqueries. The DuckDB path runs end to end in tests and under Airflow 3.1 (all five tasks succeed; on corrupted data the gate fails and gold is skipped). The PySpark ingestion step, run locally on Spark 3.5.6, produces all 17 bronze tables identical to DuckDB's. Every model renders for Snowflake and parses as Snowflake SQL; <code>scripts/run_snowflake.py</code> and <code>scripts/run_databricks.sh</code> run the build on those platforms and compare every table, but <b>have not yet been run on a Snowflake or Databricks account</b>.</p>
+<h2>Results (reference build)</h2>
+<table><tr><th>Check</th><th>Result</th></tr>
+<tr><td>Planted faults found / planted; false positives</td><td>156 / 156; 0 (19 fault classes, each with recall and precision 1.0)</td></tr>
+<tr><td>dbt tests (silver / gold)</td><td>silver: 37 models built, 28 tests pass; gold: 27 models, 37 tests pass, 6 warn (the warnings are the planted faults surfacing)</td></tr>
+<tr><td>Quality gate</td><td>10 of 10 thresholds pass on the reference data; a corrupted identifier file halts the run at the gate (tested)</td></tr>
+<tr><td>NAV control</td><td>35 of 256 fund-days beyond 0.5 bp, max 51.2 bp; 0 unexplained; clean days agree with the administrator to under £1</td></tr>
+<tr><td>Private markets</td><td>DPI, RVPI, TVPI and IRR for 10 commitments match an independent Python calculation (IRR within 1e-6); a missing call found by capital-account reconciliation; secondary on purchase price (1.55x) and GP basis (1.34x)</td></tr>
+<tr><td>Reproducibility</td><td>Two builds from the same inputs give the same build id and gold hash (tested)</td></tr>
+<tr><td>Agent evaluation (scripted model)</td><td>30 questions: accuracy 100% on 24 answerable, abstention recall 100%, hallucinated numbers 0</td></tr></table>
+<h2>Agentic workflow</h2>
+<p>A PydanticAI agent answers control questions through six evidence tools (<code>explain_break</code>, <code>trace_lineage</code>, <code>check_price_staleness</code>, <code>summarise_nav_move</code>, <code>summarise_private_fund</code>, <code>list_findings</code>), also served over MCP. Output is a typed <code>Answer</code>; every number must appear in a tool result (checked), and the agent abstains on unknown funds, dates outside the data, forecasts and questions no tool covers. CI uses a <b>scripted model that is not an LLM</b>: it tests tool wiring, schemas, the faithfulness checker and the evaluation harness, and two deliberately faulty variants (one that invents a figure, one that asserts a cause for an unexplained break) are caught. <b>No real LLM run has been made</b>; <code>scripts/run_agent_live.py</code> does it with an API key.</p>
+<h2>Not run, and known limits</h2>
+<p>Not yet run: Snowflake and Databricks accounts (runners written and tested offline); any real-LLM evaluation. Limits: detection rules were written knowing the planted fault classes, so recall on unseen fault types is untested; the DuckDB client view enforces row-level security in Python, mirroring but not identical to Snowflake row access policies; single GBP base currency; no accrued interest or subscriptions.</p>
+</body></html>

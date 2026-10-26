@@ -1,0 +1,12 @@
+source: vendor_fx
+owner: Market data vendor
+description: Daily FX rates to GBP (EURGBP, USDGBP).
+schema_version: 1
+grain: rate_date x pair
+freshness: {expected_by: "T+0 20:30 UK", max_age_hours: 26}
+volume: {min_rows: 100}
+fields:
+  rate_date: {type: date, nullable: false}
+  pair:      {type: string, nullable: false, enum: [EURGBP, USDGBP]}
+  rate:      {type: decimal, nullable: false, min: 0.000001}
+  vendor_ts: {type: timestamp, nullable: false}

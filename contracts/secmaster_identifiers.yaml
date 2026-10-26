@@ -1,0 +1,13 @@
+source: secmaster_identifiers
+owner: Data management (security master)
+description: Identifier cross-reference with validity dates. One security can hold several ISINs over time.
+schema_version: 1
+grain: security_id x id_type x id_value x valid_from
+freshness: {expected_by: "T+0 18:00 UK", max_age_hours: 48}
+volume: {min_rows: 60}
+fields:
+  security_id: {type: string, nullable: false, pattern: '^S\d{3}$'}
+  id_type:     {type: string, nullable: false, enum: [ISIN, SEDOL, CUSIP]}
+  id_value:    {type: string, nullable: false}
+  valid_from:  {type: date, nullable: false}
+  valid_to:    {type: date, nullable: true}

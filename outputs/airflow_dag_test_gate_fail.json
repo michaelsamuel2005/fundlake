@@ -1,0 +1,41 @@
+{
+ "command": "airflow dags test fundlake_daily 2026-10-26",
+ "exit_code": 1,
+ "dag_run_id": "manual__2026-10-26T20:02:59.269735+00:00",
+ "dag_run_state": "failed",
+ "started": "2026-10-26 00:00:00.000000",
+ "ended": "2026-10-26 20:03:17.938731",
+ "tasks": [
+  {
+   "task_id": "validate_contracts",
+   "state": "success",
+   "started": "2026-10-26 20:02:59.595806",
+   "ended": "2026-10-26 20:03:02.575548"
+  },
+  {
+   "task_id": "dbt_silver",
+   "state": "success",
+   "started": "2026-10-26 20:03:02.684560",
+   "ended": "2026-10-26 20:03:15.161472"
+  },
+  {
+   "task_id": "quality_gate",
+   "state": "failed",
+   "started": "2026-10-26 20:03:15.253901",
+   "ended": "2026-10-26 20:03:17.905836"
+  },
+  {
+   "task_id": "dbt_gold",
+   "state": "upstream_failed",
+   "started": "2026-10-26 20:03:17.928872",
+   "ended": "2026-10-26 20:03:17.928872"
+  },
+  {
+   "task_id": "record_audit",
+   "state": "upstream_failed",
+   "started": "2026-10-26 20:03:17.930801",
+   "ended": "2026-10-26 20:03:17.930801"
+  }
+ ],
+ "audit_record": null
+}

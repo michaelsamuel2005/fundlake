@@ -1,0 +1,14 @@
+source: pm_commitments
+owner: Private markets operations
+description: LP commitments by investor (a fundlake fund) and private fund; secondary purchases point at their transfer record.
+schema_version: 1
+grain: commitment_id
+volume: {min_rows: 1}
+fields:
+  commitment_id:     {type: string, nullable: false, pattern: '^CM\d{3}$'}
+  investor_id:       {type: string, nullable: false, enum: [F03, F04]}
+  pm_fund_id:        {type: string, nullable: false, pattern: '^PM\d{2}$'}
+  commitment_date:   {type: date, nullable: false}
+  commitment_amount: {type: decimal, nullable: false, min: 0.01}
+  origin:            {type: string, nullable: false, enum: [primary, secondary]}
+  transfer_id:       {type: string, nullable: true}

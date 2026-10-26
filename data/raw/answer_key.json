@@ -1,0 +1,622 @@
+{
+ "seed": 20261026,
+ "label": "SYNTHETIC; faults planted by fundlake.synth",
+ "faults": {
+  "identifier_change": [
+   {
+    "security_id": "S026",
+    "old_isin": "US0C4K4WCLY4",
+    "new_isin": "USFJ596BC714",
+    "effective": "2026-08-14"
+   }
+  ],
+  "identifier_conflict": [
+   {
+    "security_id": "S039",
+    "other_security_id": "S042",
+    "id_type": "SEDOL",
+    "id_value": "LYGSGP2"
+   }
+  ],
+  "position_break": [
+   {
+    "kind": "missed_settlement",
+    "fund_id": "F01",
+    "security_id": "S039",
+    "dates": [
+     "2026-09-01",
+     "2026-09-02",
+     "2026-09-03",
+     "2026-09-04",
+     "2026-09-07",
+     "2026-09-08",
+     "2026-09-09"
+    ],
+    "quantity_diff": 131000.0
+   },
+   {
+    "kind": "missed_settlement",
+    "fund_id": "F03",
+    "security_id": "S050",
+    "dates": [
+     "2026-09-03",
+     "2026-09-04",
+     "2026-09-07",
+     "2026-09-08",
+     "2026-09-09",
+     "2026-09-10",
+     "2026-09-11"
+    ],
+    "quantity_diff": -64900.0
+   },
+   {
+    "kind": "missed_settlement",
+    "fund_id": "F03",
+    "security_id": "S027",
+    "dates": [
+     "2026-08-21",
+     "2026-08-24",
+     "2026-08-25",
+     "2026-08-26",
+     "2026-08-27",
+     "2026-08-28",
+     "2026-09-01"
+    ],
+    "quantity_diff": -8100.0
+   },
+   {
+    "kind": "custodian_extra",
+    "fund_id": "F01",
+    "security_id": "S043",
+    "dates": [
+     "2026-07-24",
+     "2026-07-27",
+     "2026-07-28",
+     "2026-07-29",
+     "2026-07-30",
+     "2026-07-31",
+     "2026-08-03",
+     "2026-08-04",
+     "2026-08-05",
+     "2026-08-06",
+     "2026-08-07",
+     "2026-08-10",
+     "2026-08-11",
+     "2026-08-12",
+     "2026-08-13",
+     "2026-08-14",
+     "2026-08-17",
+     "2026-08-18",
+     "2026-08-19",
+     "2026-08-20",
+     "2026-08-21",
+     "2026-08-24",
+     "2026-08-25",
+     "2026-08-26",
+     "2026-08-27",
+     "2026-08-28",
+     "2026-09-01",
+     "2026-09-02",
+     "2026-09-03",
+     "2026-09-04",
+     "2026-09-07",
+     "2026-09-08",
+     "2026-09-09",
+     "2026-09-10",
+     "2026-09-11",
+     "2026-09-14",
+     "2026-09-15",
+     "2026-09-16",
+     "2026-09-17",
+     "2026-09-18",
+     "2026-09-21",
+     "2026-09-22",
+     "2026-09-23",
+     "2026-09-24",
+     "2026-09-25",
+     "2026-09-28",
+     "2026-09-29",
+     "2026-09-30"
+    ],
+    "quantity_diff": 72940.0
+   },
+   {
+    "kind": "missing_position",
+    "fund_id": "F01",
+    "security_id": "S021",
+    "dates": [
+     "2026-09-04",
+     "2026-09-07"
+    ],
+    "quantity_diff": null
+   }
+  ],
+  "missing_price": [
+   {
+    "security_id": "S019",
+    "date": "2026-09-03"
+   },
+   {
+    "security_id": "S024",
+    "date": "2026-09-10"
+   },
+   {
+    "security_id": "S004",
+    "date": "2026-08-11"
+   },
+   {
+    "security_id": "S005",
+    "date": "2026-08-10"
+   },
+   {
+    "security_id": "S013",
+    "date": "2026-09-21"
+   },
+   {
+    "security_id": "S029",
+    "date": "2026-09-21"
+   },
+   {
+    "security_id": "S028",
+    "date": "2026-08-17"
+   },
+   {
+    "security_id": "S034",
+    "date": "2026-08-17"
+   }
+  ],
+  "stale_price": [
+   {
+    "security_id": "S042",
+    "dates": [
+     "2026-08-12",
+     "2026-08-13",
+     "2026-08-14",
+     "2026-08-17",
+     "2026-08-18",
+     "2026-08-19"
+    ],
+    "price": 97.0952
+   }
+  ],
+  "stale_fx": [
+   {
+    "pair": "EURGBP",
+    "dates": [
+     "2026-09-10",
+     "2026-09-11",
+     "2026-09-14",
+     "2026-09-15",
+     "2026-09-16",
+     "2026-09-17"
+    ],
+    "rate": 0.83917
+   }
+  ],
+  "duplicate_trade": [
+   {
+    "trade_id": "T0000197"
+   },
+   {
+    "trade_id": "T0000198"
+   },
+   {
+    "trade_id": "T0000199"
+   },
+   {
+    "trade_id": "T0000200"
+   },
+   {
+    "trade_id": "T0000201"
+   },
+   {
+    "trade_id": "T0000202"
+   },
+   {
+    "trade_id": "T0000203"
+   },
+   {
+    "trade_id": "T0000204"
+   },
+   {
+    "trade_id": "T0000205"
+   },
+   {
+    "trade_id": "T0000206"
+   },
+   {
+    "trade_id": "T0000358"
+   },
+   {
+    "trade_id": "T0000359"
+   },
+   {
+    "trade_id": "T0000360"
+   },
+   {
+    "trade_id": "T0000361"
+   },
+   {
+    "trade_id": "T0000362"
+   },
+   {
+    "trade_id": "T0000363"
+   },
+   {
+    "trade_id": "T0000364"
+   },
+   {
+    "trade_id": "T0000365"
+   },
+   {
+    "trade_id": "T0000366"
+   },
+   {
+    "trade_id": "T0000367"
+   },
+   {
+    "trade_id": "T0000368"
+   },
+   {
+    "trade_id": "T0000369"
+   },
+   {
+    "trade_id": "T0000484"
+   },
+   {
+    "trade_id": "T0000485"
+   },
+   {
+    "trade_id": "T0000486"
+   },
+   {
+    "trade_id": "T0000487"
+   },
+   {
+    "trade_id": "T0000488"
+   },
+   {
+    "trade_id": "T0000489"
+   },
+   {
+    "trade_id": "T0000490"
+   },
+   {
+    "trade_id": "T0000491"
+   },
+   {
+    "trade_id": "T0000492"
+   },
+   {
+    "trade_id": "T0000493"
+   }
+  ],
+  "claim_before_inception": [
+   {
+    "claim_id": "CL000445"
+   },
+   {
+    "claim_id": "CL000395"
+   },
+   {
+    "claim_id": "CL000235"
+   },
+   {
+    "claim_id": "CL000091"
+   },
+   {
+    "claim_id": "CL000436"
+   }
+  ],
+  "orphan_claim": [
+   {
+    "claim_id": "CL000143"
+   },
+   {
+    "claim_id": "CL000148"
+   },
+   {
+    "claim_id": "CL000281"
+   },
+   {
+    "claim_id": "CL000060"
+   }
+  ],
+  "reported_before_loss": [
+   {
+    "claim_id": "CL000029"
+   },
+   {
+    "claim_id": "CL000188"
+   }
+  ],
+  "duplicate_claim": [
+   {
+    "claim_id": "CL000118"
+   },
+   {
+    "claim_id": "CL000081"
+   },
+   {
+    "claim_id": "CL000088"
+   }
+  ],
+  "pm_capital_account_break": [
+   {
+    "investor_id": "F04",
+    "pm_fund_id": "PM05",
+    "period_end": "2025-09-30"
+   },
+   {
+    "investor_id": "F04",
+    "pm_fund_id": "PM05",
+    "period_end": "2025-12-31"
+   },
+   {
+    "investor_id": "F04",
+    "pm_fund_id": "PM05",
+    "period_end": "2026-03-31"
+   },
+   {
+    "investor_id": "F04",
+    "pm_fund_id": "PM05",
+    "period_end": "2026-06-30"
+   }
+  ],
+  "pm_missing_nav_statement": [
+   {
+    "investor_id": "F04",
+    "pm_fund_id": "PM07",
+    "period_end": "2026-03-31"
+   }
+  ],
+  "pm_stale_nav": [
+   {
+    "investor_id": "F03",
+    "pm_fund_id": "PM06",
+    "period_end": "2025-09-30"
+   },
+   {
+    "investor_id": "F03",
+    "pm_fund_id": "PM06",
+    "period_end": "2025-12-31"
+   },
+   {
+    "investor_id": "F03",
+    "pm_fund_id": "PM06",
+    "period_end": "2026-03-31"
+   }
+  ],
+  "pm_over_call": [
+   {
+    "investor_id": "F03",
+    "pm_fund_id": "PM02"
+   }
+  ],
+  "pm_unknown_investor": [
+   {
+    "notice_id": "CN-PM01-F04-029-S"
+   }
+  ],
+  "pm_notice_lines_mismatch": [
+   {
+    "notice_id": "CN-PM02-F03-002"
+   },
+   {
+    "notice_id": "CN-PM02-F03-016"
+   }
+  ],
+  "pm_sign_corrected": [
+   {
+    "notice_id": "DN-PM02-F03-014"
+   },
+   {
+    "notice_id": "DN-PM08-F03-013"
+   }
+  ],
+  "pm_duplicate_notice": [
+   {
+    "notice_id": "DN-PM04-F04-017"
+   },
+   {
+    "notice_id": "DN-PM07-F04-010"
+   },
+   {
+    "notice_id": "DN-PM08-F03-012"
+   }
+  ]
+ },
+ "attribute_history": [
+  {
+   "security_id": "S039",
+   "field": "rating",
+   "old": "AAA",
+   "new": "AA",
+   "effective": "2026-08-20"
+  },
+  {
+   "security_id": "S044",
+   "field": "rating",
+   "old": "AAA",
+   "new": "AA",
+   "effective": "2026-08-20"
+  },
+  {
+   "security_id": "S048",
+   "field": "rating",
+   "old": "BBB",
+   "new": "BB",
+   "effective": "2026-08-20"
+  }
+ ],
+ "pm_expected": {
+  "F04:PM01": {
+   "paid_in": 9007402.47,
+   "distributions": 6396701.21,
+   "nav_asof": 7597652.07,
+   "last_statement": "2026-06-30",
+   "dpi": 0.7101604742660066,
+   "rvpi": 0.8434897957879304,
+   "tvpi": 1.5536502700539372,
+   "irr": 0.5894221003286761,
+   "is_reconciled": true,
+   "gp_basis_tvpi": 1.3431338120958627
+  },
+  "F04:PM03": {
+   "paid_in": 22376426.29,
+   "distributions": 17788656.73,
+   "nav_asof": 8477179.3,
+   "last_statement": "2026-06-30",
+   "dpi": 0.7949730890651528,
+   "rvpi": 0.37884419925394625,
+   "tvpi": 1.1738172883190992,
+   "irr": 0.050479961887535896,
+   "is_reconciled": true
+  },
+  "F04:PM04": {
+   "paid_in": 26175381.09,
+   "distributions": 25910641.94,
+   "nav_asof": 8888002.53,
+   "last_statement": "2026-06-30",
+   "dpi": 0.9898859485907868,
+   "rvpi": 0.33955580243282707,
+   "tvpi": 1.329441751023614,
+   "irr": 0.06641259843724445,
+   "is_reconciled": true
+  },
+  "F04:PM05": {
+   "paid_in": 29500695.63,
+   "distributions": 14658249.3,
+   "nav_asof": 24468166.52,
+   "last_statement": "2026-06-30",
+   "dpi": 0.49687809005743094,
+   "rvpi": 0.8294098155135603,
+   "tvpi": 1.326287905570991,
+   "irr": 0.08491145914923892,
+   "is_reconciled": false
+  },
+  "F04:PM07": {
+   "paid_in": 12855750.01,
+   "distributions": 2685853.95,
+   "nav_asof": 12139317.19,
+   "last_statement": "2026-06-30",
+   "dpi": 0.20892238476252073,
+   "rvpi": 0.9442714101127733,
+   "tvpi": 1.153193794875294,
+   "irr": 0.051094081394853386,
+   "is_reconciled": true
+  },
+  "F04:PM08": {
+   "paid_in": 13247001.17,
+   "distributions": 1071787.68,
+   "nav_asof": 14625350.85,
+   "last_statement": "2026-06-30",
+   "dpi": 0.08090794786273882,
+   "rvpi": 1.104049940232624,
+   "tvpi": 1.1849578880953628,
+   "irr": 0.08738897571305271,
+   "is_reconciled": true
+  },
+  "F03:PM02": {
+   "paid_in": 12705048.95,
+   "distributions": 13929269.54,
+   "nav_asof": 5277192.14,
+   "last_statement": "2026-06-30",
+   "dpi": 1.0963570148228354,
+   "rvpi": 0.41536181094367214,
+   "tvpi": 1.5117188257665077,
+   "irr": 0.11379242791704314,
+   "is_reconciled": true
+  },
+  "F03:PM03": {
+   "paid_in": 8966236.19,
+   "distributions": 8693912.96,
+   "nav_asof": 4537112.14,
+   "last_statement": "2026-06-30",
+   "dpi": 0.9696279214344459,
+   "rvpi": 0.5060219298104395,
+   "tvpi": 1.4756498512448855,
+   "irr": 0.12350737005340051,
+   "is_reconciled": true
+  },
+  "F03:PM06": {
+   "paid_in": 12687000.01,
+   "distributions": 10867269.67,
+   "nav_asof": 5280363.61,
+   "last_statement": "2026-06-30",
+   "dpi": 0.8565673257219458,
+   "rvpi": 0.41620269613288985,
+   "tvpi": 1.2727700218548357,
+   "irr": 0.10781214886199952,
+   "is_reconciled": true
+  },
+  "F03:PM08": {
+   "paid_in": 5298800.45,
+   "distributions": 380154.68,
+   "nav_asof": 5176590.95,
+   "last_statement": "2026-06-30",
+   "dpi": 0.071743535841211,
+   "rvpi": 0.9769363837809745,
+   "tvpi": 1.0486799196221854,
+   "irr": 0.02409440726426315,
+   "is_reconciled": true
+  }
+ },
+ "pm_true_nav_asof": {
+  "F04:PM01": 8107404.62,
+  "F04:PM03": 9009775.8,
+  "F04:PM04": 9109273.07,
+  "F04:PM05": 24841484.77,
+  "F04:PM07": 12534357.73,
+  "F04:PM08": 14882639.68,
+  "F03:PM02": 5434000.7,
+  "F03:PM03": 4462311.44,
+  "F03:PM06": 5639016.44,
+  "F03:PM08": 5307525.75
+ },
+ "pm_missing_notice": {
+  "notice_id": "CN-PM05-F04-017",
+  "value_date": "2025-08-09",
+  "amount": 808263.77
+ },
+ "pm_transfer": {
+  "transfer_id": "TR-0001",
+  "pm_fund_id": "PM01",
+  "buyer_investor_id": "F04",
+  "seller_name": "Seller LP (synthetic)",
+  "reference_date": "2025-03-31",
+  "transfer_date": "2025-06-30",
+  "reference_nav": 11899208.75,
+  "purchase_price": 8888718.81,
+  "transferred_commitment": 40000000.0,
+  "inherited_paid_in": 35903288.86,
+  "inherited_distributions": 34387975.99,
+  "unfunded_at_transfer": 4096711.14
+ },
+ "pm_fx_asof": {
+  "EURGBP": 0.82791,
+  "USDGBP": 0.75732,
+  "GBPGBP": 1.0
+ },
+ "counts": {
+  "identifier_change": 1,
+  "identifier_conflict": 1,
+  "position_break": 5,
+  "missing_price": 8,
+  "stale_price": 1,
+  "stale_fx": 1,
+  "duplicate_trade": 32,
+  "claim_before_inception": 5,
+  "orphan_claim": 4,
+  "reported_before_loss": 2,
+  "duplicate_claim": 3,
+  "pm_capital_account_break": 4,
+  "pm_missing_nav_statement": 1,
+  "pm_stale_nav": 3,
+  "pm_over_call": 1,
+  "pm_unknown_investor": 1,
+  "pm_notice_lines_mismatch": 2,
+  "pm_sign_corrected": 2,
+  "pm_duplicate_notice": 3
+ }
+}

@@ -1,0 +1,16 @@
+source: pm_nav_statements
+owner: General partners via the private-markets portal
+description: Quarterly capital-account statements (NAV and cumulative contributions and distributions as the GP records them), delivered about 75 days after quarter end.
+schema_version: 1
+grain: pm_fund_id x investor_id x period_end
+freshness: {expected_by: "period_end + 90 days", max_age_hours: 2400}
+volume: {min_rows: 20}
+fields:
+  statement_id:          {type: string, nullable: false}
+  pm_fund_id:            {type: string, nullable: false, pattern: '^PM\d{2}$'}
+  investor_id:           {type: string, nullable: false}
+  period_end:            {type: date, nullable: false}
+  nav:                   {type: decimal, nullable: false, min: 0}
+  contributions_to_date: {type: decimal, nullable: false, min: 0}
+  distributions_to_date: {type: decimal, nullable: false, min: 0}
+  received_date:         {type: date, nullable: false}

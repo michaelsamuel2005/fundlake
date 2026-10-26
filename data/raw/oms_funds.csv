@@ -1,0 +1,5 @@
+fund_id,fund_name,base_currency,is_insurance_account
+F01,UK Equity Income (synthetic),GBP,False
+F02,Global Bond (synthetic),GBP,False
+F03,Multi-Asset (synthetic),GBP,False
+F04,Insurance General Account (synthetic),GBP,True

@@ -1,0 +1,93 @@
+{
+ "engine": "spark",
+ "spark_version": "3.5.6",
+ "databricks_runtime": null,
+ "target": "/tmp/spark_out",
+ "tables": {
+  "oms_trades": {
+   "rows": 769,
+   "fingerprint": "4d3e9769ed8b915d797c9daf41d8ffd0524d65fb7cb061410b7e09f15c2abeb8",
+   "row_numbers_ok": true
+  },
+  "oms_funds": {
+   "rows": 4,
+   "fingerprint": "2093f529ec40927ced4c6df421ac1139e700b00c899a3299b2ef5850176f8d56",
+   "row_numbers_ok": true
+  },
+  "oms_counterparties": {
+   "rows": 6,
+   "fingerprint": "5eb7e73d1d8c5d3dc98ea8992eb029208c2a177594d0b5aac894a5f6a1a98973",
+   "row_numbers_ok": true
+  },
+  "custodian_positions": {
+   "rows": 5051,
+   "fingerprint": "81fd7bb4992857bc7a0462709143caffee47e20dab09b630fba7be72318a74c2",
+   "row_numbers_ok": true
+  },
+  "custodian_cash_nav": {
+   "rows": 260,
+   "fingerprint": "9f5da86c4869bec39aa77e28ddedc4387fe84f3822ef6463773fafb492dab249",
+   "row_numbers_ok": true
+  },
+  "vendor_prices": {
+   "rows": 3892,
+   "fingerprint": "1383095fdd34a32062d75d992bcd3a49877e1090e204e4de61bd96543374788d",
+   "row_numbers_ok": true
+  },
+  "vendor_fx": {
+   "rows": 130,
+   "fingerprint": "165a9e688324a7bd327fc29e9729716dbc9a6f3bd7f0e909b5021e5e73b86e29",
+   "row_numbers_ok": true
+  },
+  "secmaster_securities": {
+   "rows": 63,
+   "fingerprint": "7f27b9d768c0dac7f511ce4f77b5844c0bcd86e329eaef78544bb948cea4b8ea",
+   "row_numbers_ok": true
+  },
+  "secmaster_identifiers": {
+   "rows": 140,
+   "fingerprint": "6908d4d4f2ec4ba55e0b64934aed3c7d930ba3cab39fb8fc3d88587cd51816fa",
+   "row_numbers_ok": true
+  },
+  "insurer_policies": {
+   "rows": 400,
+   "fingerprint": "8f716c5075971523fbab4297adbfd5a07011ba57dc43455a4984c2cd76db24bd",
+   "row_numbers_ok": true
+  },
+  "insurer_claims": {
+   "rows": 280,
+   "fingerprint": "50096499886d33ea88e44fe86da54b47506087a19b6acca2221ed2890dbb64d5",
+   "row_numbers_ok": true
+  },
+  "pm_funds": {
+   "rows": 8,
+   "fingerprint": "eedeb9f194b604937d1e5de6ce3cdd7a1c4486750dc6385be1395bbb5cddb03b",
+   "row_numbers_ok": true
+  },
+  "pm_commitments": {
+   "rows": 10,
+   "fingerprint": "005873bba89e470ee84d47611c40c96d4114ec32116746e40507897275ef1f56",
+   "row_numbers_ok": true
+  },
+  "pm_secondary_transfers": {
+   "rows": 1,
+   "fingerprint": "333af5baf09e2c8eb690321c4a48a66d532a261538e7d05cbff23a8ee9a984e6",
+   "row_numbers_ok": true
+  },
+  "pm_notices": {
+   "rows": 337,
+   "fingerprint": "cfd573e17f47f0359fafe3c71a9b2e24bd1d72b8d344736d93dfac2f0ae9f4b5",
+   "row_numbers_ok": true
+  },
+  "pm_notice_lines": {
+   "rows": 653,
+   "fingerprint": "9a3ad166b75428e3e4eb73b93754b1cdba396cf09548291a3cb229afac53afc6",
+   "row_numbers_ok": true
+  },
+  "pm_nav_statements": {
+   "rows": 193,
+   "fingerprint": "ac90870735b3b69ddc37a5dc45731412b03eb97b84745d28ba309e26a88cdd71",
+   "row_numbers_ok": true
+  }
+ }
+}

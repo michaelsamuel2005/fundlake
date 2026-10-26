@@ -1,0 +1,20 @@
+source: insurer_policies
+owner: Insurer (policy administration). CONTAINS PERSONAL DATA (client_name, email, date_of_birth, postcode).
+description: Policy extract joined to client details.
+schema_version: 1
+grain: policy_id
+freshness: {expected_by: "Monthly, day 3", max_age_hours: 800}
+volume: {min_rows: 100}
+fields:
+  policy_id:      {type: string, nullable: false, pattern: '^P\d{6}$'}
+  client_id:      {type: string, nullable: false}
+  product:        {type: string, nullable: false, enum: [Motor, Home, Commercial Property, Liability]}
+  start_date:     {type: date, nullable: false}
+  end_date:       {type: date, nullable: false}
+  annual_premium: {type: decimal, nullable: false, min: 0}
+  sum_insured:    {type: decimal, nullable: false, min: 0}
+  region:         {type: string, nullable: false}
+  client_name:    {type: string, nullable: false}
+  email:          {type: string, nullable: false}
+  date_of_birth:  {type: date, nullable: false}
+  postcode:       {type: string, nullable: false}
